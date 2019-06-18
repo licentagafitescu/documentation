@@ -1,0 +1,14 @@
+\babel@toc {romanian}{}
+\contentsline {chapter}{Rezumat}{2}{chapter*.2}% 
+\contentsline {chapter}{Introducere}{3}{chapter*.3}% 
+\contentsline {chapter}{\numberline {1}Fundamente}{5}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Re\IeC {\textcommabelow t}ea neural\IeC {\u a}}{5}{section.1.1}% 
+\contentsline {chapter}{\numberline {2}Titlul celui de-al doilea capitol}{10}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Titlul sec\IeC {\textcommabelow t}iunii 1}{10}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Titlul sec\IeC {\textcommabelow t}iunii 2}{11}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Titlul sec\IeC {\textcommabelow t}iunii 3}{11}{section.2.3}% 
+\contentsline {chapter}{\numberline {3}Titlul celui de-al treilea capitol}{12}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Titlul sec\IeC {\textcommabelow t}iunii 1}{12}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Titlul sec\IeC {\textcommabelow t}iunii 2}{13}{section.3.2}% 
+\contentsline {chapter}{Concluzii}{14}{chapter*.4}% 
+\contentsline {chapter}{Bibliografie}{15}{chapter*.5}% 
