@@ -136,3 +136,41 @@ Tensorflow este un \textit{framework} cu sursă deschisă  dezvoltat de Google �
 \subsection{Keras}
 Keras reprezintă un API de nivel foarte înalt dedicat rețelelor neurale, scris în Python și care poate rula pe mai multe platforme de învățare automată cum ar fi TensorFlow, CNTK sau Theano. A fost dezvoltat pentru a abstractiza la maximum procesul de creare a unei rețele neurale, având ca scop atât experimentarea rapidă, cât și construcția într-un mod facil a unei arhitecturi solide. Keras poate fi văzut ca o interfață simplă, consistentă, folosită pentru cazurile uzuale, ce se pliază peste un \textit{back-end} optimizat de \textit{deep learning} și învățare automată. Este extrem de modular, permițând reutilizarea de blocuri configurabile, dar și extensibil, utilizatorii având posibilitatea de a crea noi straturi, funcții de cost sau arhitecturi pentru idei de cercetare. 
 
+\section{OAuth}
+ OAuth este un protocol deschis ce permite o metodă pentru o aplicație  client să acceseze diverse resurse protejate de pe un server fără ca utilizatorul să își dezvăluie credențialele de pe server aplicației client.\cite{RFC5849}
+ 
+ Procesul de autentificare OAuth folosește două tipuri de \textit{token}\cite{oauth-core-revision}:
+ \begin{enumerate}
+     \item \textit{Request token}
+     
+     Folosit de aplicația client pentru a cere utilizatorului să autorizeze accesul la resursele protejate. \textit{Token}-ul autorizat de utilizator este folosit o singură dată, este recomandat să expire după o limită de timp și va fi schimbat cu un \textit{token} de acces.
+     \item \textit{Access token}
+     
+     Folosit de aplicația client să acceseze resursele protejate în numele utilizatorului. 
+ \end{enumerate}{}
+ 
+ Pașii folosiți în protocolul OAuth:
+ \begin{enumerate}
+     \item Aplicația trimite o cerere semnată pentru a primi un \textit{Request token}
+     \item Serviciul furnizează aplicației \textit{token}-ul solicitat
+     \item Aplicația redirectează utilizatorul spre o pagină de autorizare, unde utilizatorul își dă acordul, apoi se revine în contextul aplicației
+     \item Printr-o nouă cerere semnată, aplicația schimbă \textit{Request Token}-ul cu un \textit{token} de acces și un secret al acestui \textit{token}
+     \item Aplicația folosește t\textit{token}-ul de acces și secretul acestuia pentru a accesa resursele protejate
+ \end{enumerate}{}
+ 
+ 
+ \begin{figure}[!htbp]
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/oauth.png}
+        \caption{Autentificarea prin protocolul OAuth\cite{oauth-bible}}
+    \end{center}
+\end{figure}
+
+\section{Angular}
+Angular este un \textit{framework} cu sursă deschisă dezvoltat de către Google pentru crearea de aplicații client  SPA (\textit{single-page application}) folosind HTML, CSS și TypeScript. O aplicație Angular este compusă din module, componente și servicii.
+
+\section{Flask}
+Flask este un \textit{microframework} WSGI(\textit{Web Server Gateway Interface}) pentru realizarea de aplicații web, scris in Python. Este cunoscut pentru simplitatea sa, dar și pentru posibilitatea de a se scala pentru aplicații oricât de complexe.
+
+\section{Google Cloud Platform}
+Google CLoud Platform (GCP), oferită de Google, reprezintă o suită de servicii \textit{cloud computing} și unelte de infrastructură ce oferă utilizatorilor posibilitatea de a crea, găzdui și scala diverse aplicații. GCP oferă diverse servicii, în domenii precum: calcul, învățare automată, inteligență artificială, \textit{Internet of Things}, stocare, baze de date relaționale și nerelaționale, \textit{big data} , etc.

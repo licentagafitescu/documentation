@@ -1,10 +1,20 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{intuitive-explanation-conv}
 ***.
 \newblock An intuitive explanation of convolutional neural networks.
 \newblock
   \url{https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/}.
+
+\bibitem{oauth-bible}
+***.
+\newblock Oauth bible.
+\newblock \url{http://oauthbible.com/}.
+
+\bibitem{oauth-core-revision}
+***.
+\newblock Oauth core 1.0 revision a.
+\newblock \url{https://oauth.net/core/1.0a/}.
 
 \bibitem{benchea-course}
 Răzvan Benchea.
@@ -28,6 +38,12 @@ Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
 Kevin Gurney.
 \newblock {\em An Introduction to Neural Networks}.
 \newblock Taylor \& Francis, Inc., 1997.
+
+\bibitem{RFC5849}
+Eran Hammer-Lahav.
+\newblock The oauth 1.0 protocol.
+\newblock RFC 5849, RFC Editor, April 2010.
+\newblock \url{http://www.rfc-editor.org/rfc/rfc5849.txt}.
 
 \bibitem{Nielsen2015}
 Michael~A. Nielsen.
