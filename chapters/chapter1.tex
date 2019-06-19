@@ -70,7 +70,8 @@ Când antrenăm un simplu perceptron, îi putem modifica instant ponderile în f
 Algoritmul funcționează astfel:\cite{benchea-course}
 
 Pentru fiecare strat \textit{l}, începând cu ultimul:
-\quad Pentru fiecare neuron \textit{i} de pe stratul \textit{l}
+
+\quad Pentru fiecare neuron \textit{i} de pe stratul \textit{l}:
 \begin{enumerate}
     \item Calculăm eroarea neuronului \textit{i} de pe stratul \textit{l}
     \item Folosind eroarea calculată calculăm derivatele parțiale ale funcției de cost în funcție de pragul neuronului \textit{i} și ponderile sale (derivatele parțiale ne arată cum variază funcția de cost în funcție de parametrii aleși)
@@ -84,3 +85,54 @@ Pentru fiecare strat \textit{l}, începând cu ultimul:
         \caption{Algoritmul de Backpropagation\cite{backpropagation}}
     \end{center}
 \end{figure}
+
+Atât în timpul antrenării, cât și în timpul folosirii unei rețele (trecerea datelor de intrare prin rețea pentru a obține date de ieșire), se folosește foarte mult înmulțirea de matrici (pentru a înmulți ponderile neuronilor cu datele de intrare). Pentru anumite cazuri de input, putem optimiza numărul de parametri și procesul de funcționare. În continuare vom prezenta un tip de rețea optimizată în mod special pentru imagini.
+
+\section{Rețele neurale convoluționale}
+ O rețea neurală convoluțională este un tip specializat de rețea neurală pentru procesarea datelor organizate sub o formă de tablou (un tablou unidimensional pentru datele temporale, un tablou bidimensional de pixeli pentru imagini) care folosește o operație matematică specializată numită convoluție în locul înmulțirii generale de matrici.\cite{Goodfellow-et-al-2016}
+ 
+ O rețea convoluțională are anumite tipuri de straturi care nu apar într-o rețea clasică: straturi convoluționale și straturi de \textit{pooling}, dar la final apar și straturi conectate(\textit{fully-connected}) similare cu cele clasice.  În cadrul straturilor convoluționale și celor de \textit{pooling} neuronii din fiecare strat vor fi conectați doar la o mică regiune din stratul precedent, în loc de conexiuni între toți neuronii cum aveam la o arhitectură clasică.
+ 
+ \begin{figure}[!htbp]
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/convolutional_network.png}
+        \caption{Arhitectura unei rețele convoluționale\cite{intuitive-explanation-conv}}
+    \end{center}
+\end{figure}
+
+\subsection{Convoluția}
+ În cadrul unui strat de convoluție se folosește un filtru( sau \textit{kernel}) pentru a extrage trăsături din cadrul imaginii. Filtrul se aplică unei mici regiuni din stratul precedent, realizând o mapare a imaginii în funcție de acel filtru. Cum imaginea este un tablou bidimensional de pixeli, un filtru va fi reprezentat tot de către un tablou bidimensional, mai mic decât cel de intrare. Aplicarea filtrului presupune calcularea produsului scalar între o parte din imagine de mărimea filtrului și filtru, efectuând această operație pentru toate părțile de aceeași mărime din imagine, luate la rând.
+ 
+ Un exemplu de aplicare a unui filtru pe o imagine:
+ 
+ \begin{figure}[!htbp]
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{images/filtru.png}
+        \caption{Operația de convoluție \cite{Goodfellow-et-al-2016}}
+    \end{center}
+\end{figure}
+
+
+\subsection{\textit{Pooling}}
+Straturile de \textit{pooling} (denumite și straturi de \textit{subsampling} sau \textit{downsampling}) vor prelua câte o mapare a imaginii dată de un filtru convoluțional și vor reduce dimensiunea fiecărei mapări, extrăgând astfel trăsăturile dominante. Pot exista mai multe tipuri de straturi de \textit{pooling}: \textit{MaxPooling}, \textit{AveragePooling}, etc. De exemplu, în cazul operației de \textit{MaxPooling} ne alegem o zonă din mapare, din care extragem doar elementul maxim, astfel reducând dimensiunea mapării.
+
+\begin{figure}[!htbp]
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{images/pooling.png}
+        \caption{Exemplu de \textit{MaxPooling}\cite{intuitive-explanation-conv}}
+    \end{center}
+\end{figure}
+
+\subsection{\textit{Clasificare}}
+ Adăugarea unui strat \textit{fully-connected} ajută la clasificarea imaginii.Stratul de clasificare este de fapt un \textit{MLP} tradițional, cu toți neuronii din el având conexiuni cu toți neuronii din stratul precedent. Stratul de clasificare va prelua trăsăturile de nivel înalt din imagine furnizate de straturile convoluționale și reduse ca dimensiune de straturile de pooling și va realiza o clasificare a imaginii bazată pe trăsăturile întâlnite.
+
+Există multe tipuri de arhitecturi de rețele convoluționale, însă mai toate își au bazele pe operațiile descrise: convoluție, scalarea mapării(\textit{pooling}), apoi clasificare.
+
+
+\section{Keras și Tensorflow}
+\subsection{Tensorflow}
+Tensorflow este un \textit{framework} cu sursă deschisă  dezvoltat de Google și folosit pentru calcule numerice. Tensorflow oferă suport pentru învățare automată și \textit{deep learning}. Folosind diverse instrumente puse la dispoziție, utilizatorii pot construi modele de învățare automată la nivele diferite de abstractizare, de la modele construite pe baza unor serii de operații matematice la API-uri de nivel înalt pentru construirea de arhitecturi întregi prerealizate, cum ar fi rețele neurale sau regresori liniari.
+
+\subsection{Keras}
+Keras reprezintă un API de nivel foarte înalt dedicat rețelelor neurale, scris în Python și care poate rula pe mai multe platforme de învățare automată cum ar fi TensorFlow, CNTK sau Theano. A fost dezvoltat pentru a abstractiza la maximum procesul de creare a unei rețele neurale, având ca scop atât experimentarea rapidă, cât și construcția într-un mod facil a unei arhitecturi solide. Keras poate fi văzut ca o interfață simplă, consistentă, folosită pentru cazurile uzuale, ce se pliază peste un \textit{back-end} optimizat de \textit{deep learning} și învățare automată. Este extrem de modular, permițând reutilizarea de blocuri configurabile, dar și extensibil, utilizatorii având posibilitatea de a crea noi straturi, funcții de cost sau arhitecturi pentru idei de cercetare. 
+

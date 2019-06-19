@@ -3,12 +3,19 @@
 \contentsline {chapter}{Introducere}{3}{chapter*.3}% 
 \contentsline {chapter}{\numberline {1}Fundamente}{5}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}Re\IeC {\textcommabelow t}ea neural\IeC {\u a}}{5}{section.1.1}% 
-\contentsline {chapter}{\numberline {2}Titlul celui de-al doilea capitol}{10}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Titlul sec\IeC {\textcommabelow t}iunii 1}{10}{section.2.1}% 
-\contentsline {section}{\numberline {2.2}Titlul sec\IeC {\textcommabelow t}iunii 2}{11}{section.2.2}% 
-\contentsline {section}{\numberline {2.3}Titlul sec\IeC {\textcommabelow t}iunii 3}{11}{section.2.3}% 
-\contentsline {chapter}{\numberline {3}Titlul celui de-al treilea capitol}{12}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Titlul sec\IeC {\textcommabelow t}iunii 1}{12}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Titlul sec\IeC {\textcommabelow t}iunii 2}{13}{section.3.2}% 
-\contentsline {chapter}{Concluzii}{14}{chapter*.4}% 
-\contentsline {chapter}{Bibliografie}{15}{chapter*.5}% 
+\contentsline {section}{\numberline {1.2}Re\IeC {\textcommabelow t}ele neurale convolu\IeC {\textcommabelow t}ionale}{9}{section.1.2}% 
+\contentsline {subsection}{\numberline {1.2.1}Convolu\IeC {\textcommabelow t}ia}{10}{subsection.1.2.1}% 
+\contentsline {subsection}{\numberline {1.2.2}\textit {Pooling}}{10}{subsection.1.2.2}% 
+\contentsline {subsection}{\numberline {1.2.3}\textit {Clasificare}}{11}{subsection.1.2.3}% 
+\contentsline {section}{\numberline {1.3}Keras \IeC {\textcommabelow s}i Tensorflow}{11}{section.1.3}% 
+\contentsline {subsection}{\numberline {1.3.1}Tensorflow}{11}{subsection.1.3.1}% 
+\contentsline {subsection}{\numberline {1.3.2}Keras}{12}{subsection.1.3.2}% 
+\contentsline {chapter}{\numberline {2}Titlul celui de-al doilea capitol}{13}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Titlul sec\IeC {\textcommabelow t}iunii 1}{13}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Titlul sec\IeC {\textcommabelow t}iunii 2}{14}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Titlul sec\IeC {\textcommabelow t}iunii 3}{14}{section.2.3}% 
+\contentsline {chapter}{\numberline {3}Titlul celui de-al treilea capitol}{15}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Titlul sec\IeC {\textcommabelow t}iunii 1}{15}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Titlul sec\IeC {\textcommabelow t}iunii 2}{16}{section.3.2}% 
+\contentsline {chapter}{Concluzii}{17}{chapter*.4}% 
+\contentsline {chapter}{Bibliografie}{18}{chapter*.5}% 
