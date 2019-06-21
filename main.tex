@@ -10,6 +10,8 @@
 \usepackage[nottoc]{tocbibind}  % table of contents style
 \usepackage[unicode]{hyperref}  % references from the table of contents
 \usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{listings,xcolor}
 % includes options
 \geometry{  a4paper,            % scientific thesis standard
             left=3cm,
@@ -50,9 +52,12 @@
     \input{chapters/chapter1}
     \input{chapters/chapter2}
     \input{chapters/chapter3}
+    \input{chapters/chapter4}
     
     \input{chapters/conclusions}
     \input{chapters/bibliography}
     
+    \appendix
+    \input{chapters/appendix}
    
 \end{document}

@@ -57,4 +57,14 @@ Sebastian Raschka.
 \newblock
   \url{https://www.kdnuggets.com/2016/06/visual-explanation-backpropagation-algorithm-neural-networks.html}.
 
+\bibitem{45826}
+Barret Zoph and Quoc~V. Le.
+\newblock Neural architecture search with reinforcement learning.
+\newblock 2017.
+
+\bibitem{DBLP:journals/corr/ZophVSL17}
+Barret Zoph, Vijay Vasudevan, Jonathon Shlens, and Quoc~V. Le.
+\newblock Learning transferable architectures for scalable image recognition.
+\newblock {\em CoRR}, abs/1707.07012, 2017.
+
 \end{thebibliography}
