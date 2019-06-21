@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{flickr-api}
+***.
+\newblock Flickr api documentation.
+\newblock \url{https://www.flickr.com/services/api/}.
+
 \bibitem{intuitive-explanation-conv}
 ***.
 \newblock An intuitive explanation of convolutional neural networks.

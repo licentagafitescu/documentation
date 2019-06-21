@@ -1,4 +1,20 @@
 \chapter*{Concluzii} 
 \addcontentsline{toc}{chapter}{Concluzii}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc mattis enim ut tellus elementum sagittis vitae et. Placerat in egestas erat imperdiet sed euismod. Urna id volutpat lacus laoreet non curabitur gravida. Blandit turpis cursus in hac habitasse platea. Eget nunc lobortis mattis aliquam faucibus. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Viverra maecenas accumsan lacus vel facilisis volutpat est. Non odio euismod lacinia at quis risus sed vulputate odio. Consequat ac felis donec et odio pellentesque diam volutpat commodo. Etiam sit amet nisl purus in. Tortor condimentum lacinia quis vel eros donec. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Aliquam id diam maecenas ultricies mi eget mauris pharetra. Enim eu turpis egestas pretium.
+În lucrarea de față au fost prezentate scopul și cerințele, arhitectura și implementarea aplicației web {\applicationtitle}. Aceasta își propune să ofere utilizatorilor posibilitatea de a vizualiza imagini similare vizual cu o imagine încărcată, imaginile provenind de pe platforma Flickr, fie de pe profilul utilizatorului, profilele contactelor sale, sau din imaginile publice postate pe platformă.
+
+Aplicația este împărțită în două module, dar folosește și servicii externe. Autentificarea utilizatorului în aplicație se realizează prin intermediul platformei Flickr, folosind protocolul OAuth.  Modulul \textit{front-end} este realizat în Typescript cu ajutorul Angular și se ocupă de medierea interacțiunii între utilizator și modulul de \textit{back-end}. Acesta este scris în Python, iar cu ajutorul Flask expune un API cu care comunică modulul de \textit{front-end}.
+
+Analiza imaginilor este realizată cu ajutorul \textit{framework}-ului cu sursă deschisă Tensorflow și a API-ul de nivel înalt Keras. Se folosește un model de rețea neuronală disponibil prin Keras și preantrenat pe setul de date ImageNet, putând clasifica imaginile în 1000 de categorii. Modelul este o versiune scalată a arhitecturii \textit{NASNet}, propusă de cei de la Google și obținută prin proiectul AutoML și \textit{framework}-ului NAS(Neural Architecture Search) și este formată din diverse tipuri de straturi convoluționale.
+
+Imaginile sunt căutate și accesate folosind API-ul oferit de platforma Flickr, API folosit și în protocolul de autentificare.
+
+Pentru optimizarea funcționalității, se folosește un sistem de cache pentru rezolvarea rapidă a cererilor identice consecutive și API-ul oferit de DataMuse pentru a căuta cuvinte cu înțeles similar, astfel mărind plaja de căutare a imaginilor similare vizual.
+
+Există posibilități de dezvoltare ulterioară a aplicației în mai multe direcții:
+
+\subsubsection{Îmbunătățirea analizei imaginilor}
+Pentru a îmbunătăți analiza imaginilor, se poate reantrena modelul de rețea neurală folosit pe un seturi de date mai mari, astfel introducând noi categorii de clasificare. De asemenea se poate alege un alt model de rețea neurală, care să îl înlocuiască pe cel existent. O altă posibilitate este folosirea unui serviciu de \textit{Computer Vision} oferit de platformele de \textit{cloud computing}, precum Cloud Vision de la Google Cloud Platform.
+
+\subsubsection{Integrarea cu alte platforme}
+Aplicația poate fi integrată cu alte platforme sau rețele sociale cu accent pe imagini, precum Instagram, Pinterest sau Pixabay. Astfel s-ar adapta funcționalitatea aplicației la mai multe surse de date, dovedindu-se utilă pentru o gamă mai largă de utilizatori.

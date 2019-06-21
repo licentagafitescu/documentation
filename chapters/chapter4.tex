@@ -20,7 +20,7 @@ Apăsarea butonului de "Upload" va apela funcția cu același nume. Funcția va 
 Folosind clientul de http din Angular, ImageService transmite o cerere la \textit{back-end} și returnează răspunsul acestuia. În funcție de răspuns, componenta va afișa lista de etichete aferente imaginii și imaginile similare vizual, sau un mesaj explicativ în cazul în care nu au fost găsite etichete/imagini.
 
 \section{Detaliile modulului back-end}
-\subsubsection{Autentificarea cu OAuth}
+\subsection{Autentificarea cu OAuth}
 Pentru a realiza autentificarea pe platforma Flickr prin protocolul OAuth, aplicația folosește o bibliotecă de cod numită \textit{AuthLib} ce furnizează un client OAuth pentru Flask. Clientul este înregistrat în aplicație folosind anumite configurări (id-ul clientului, url-ul pentru autorizare, etc.) dintr-un fișier de configurări. Atunci când este accesată ruta /login, aplicația primește prin intermediul clientului OAuth un \textit{request token} și generează un identificator unic pentru utilizatorul ce a accesat ruta, salvând \textit{token}-ul într-un sistem de cache, apoi redirectează către ruta /authorize.
 
 În cadrul funcției ce gestioneaza ruta /authorize, clientul OAuth schimbă \textit{request token}-ul, cu un \textit{token} OAuth de acces, pe care aplicația îl va salva împreună cu identificatorul generat într-o bază de date, apoi utilizatorul va fi redirectat la modulul de \textit{front-end}.
@@ -117,3 +117,48 @@ predictions = decode_predictions(predictions)[0]
 În funcție de cerințe, aplicația folosește și un parametru care precizează probabilitatea minimă acceptată pentru o etichetă ca aceasta să se regăsească în lista de etichete finală, acest parametru având momentan valoarea de 0.25.
 
 \subsection{Aducerea imaginilor de pe Flickr}
+În funcție de opțiunea aleasă pentru sursa imaginilor ce vor fi analizate, API-ul de la Flickr va fi folosit în mod diferit.
+
+Totuși orice metodă este folosită, va fi adusă o listă de fotografii cu un format specific, un exemplu fiind:
+\begin{lstlisting}[language=XML]
+<photos page="2" pages="89" perpage="10" total="881">
+	<photo id="2636" owner="47058503995@N01" 
+		secret="a123456" server="2" title="test_04"
+		ispublic="1" isfriend="0" isfamily="0" />
+	<photo id="2635" owner="47058503995@N01"
+		secret="b123456" server="2" title="test_03"
+		ispublic="0" isfriend="1" isfamily="1" />
+	<photo id="2633" owner="47058503995@N01"
+		secret="c123456" server="2" title="test_01"
+		ispublic="1" isfriend="0" isfamily="0" />
+	<photo id="2610" owner="12037949754@N01"
+		secret="d123456" server="2" title="00_tall"
+		ispublic="1" isfriend="0" isfamily="0" />
+</photos>
+\end{lstlisting}
+\cite{flickr-api}
+
+\subsubsection{Folosirea metodei getPhotos}
+Endpoint-ul flickr.people.getPhotos returnează imaginile de pe profilul unui anumit utilizator. Pentru a utiliza metoda, cererea trebuie să fie autentificată folosind \textit{token}-ul de acces. Metoda returnează imaginile vizibile utilizatorului autentificat. Aplicația folosește această metodă pentru a aduce imaginile de pe profilul utilizatorului, utilizând valoarea "user\_id=me" ca și parametru în cerere. 
+
+\subsubsection{Folosirea metodei search}
+În cazul opțiunii de a aduce imaginile de pe profilele contactelor, găsirea listei de contacte a utilizatorului și folosirea metodei getPhotos descrise anterior ar afecta negativ performanța aplicației, o cerere putând să aducă mii de fotografii și crescând în mod neacceptat viteza de răspuns.
+Pentru a optimiza acest proces și pentru a aduce și imagini publice relevante de pe platformă, aplicația va folosi endpoint-ul flickr.photos.search, care returnează o listă de imagini ce corespund unor anumite criterii.
+
+Pentru aducerea fotografiilor relevante din lista de contacte, se va folosi "contacts=1" ca și parametru în cerere. Tot ca și parametru se va folosi "text", adăugându-i ca valoare eticheta după care vrem să căutăm imagini. Căutarea se va face în descriere, titlu și etichetele imaginilor, așa cum s-a menționat anterior. Pentru a primi cele mai relevante imagini, cererea va include și parametrul "sort=relevance".
+
+Transformarea unei imagini din formatul returnat de cele două metode într-un url se face folosind o funcție din aplicație ce construiește url-ul folosind informațiile primite, url construit după un format prestabilit.
+\begin{lstlisting}[language=Python]
+data["farm-id"] = photo.get("farm", "")
+data["server-id"] = photo.get("server")
+data["id"] = photo.get("id")
+data["secret"] = photo.get("secret")
+photo_url = "https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg".format(**data)
+\end{lstlisting}
+
+\subsection{Optimizarea procesului de returnare a imaginilor}
+Pentru a optimiza procesul de returnare a imaginilor, atât din punct de vedere al similarității vizuale, cât și a timpului de răspuns, folosim două procedee:
+\subsubsection{API-ul DataMuse}
+API-ul DataMuse permite căutarea unor sinonime, cuvinte înrudite sau cuvinte ce respectă anumite reguli în raport cu un cuvânt dat. Deoarece, de exemplu, e de dorit ca și imaginile etichetate "castel" și cele etichetate "palat" să fie returnate, deoarece au similaritate vizuală mare, se folosește API-ul pentru a căuta cuvinte cu înțeles similar cu etichetele. Pentru fiecare etichetă, se vor lua primele 3 cuvinte similare(dacă există) cu eticheta și se vor introduce în lista de etichete a imaginii. Astfel se optimizează performanța aplicației, detectându-se mai multe imagini similare din punct de vedere vizual.
+\subsubsection{Sistem de cache}
+Deoarece analiza unei singure imagini durează în medie 0.25 secunde, întreg procesul, ce include aducerea imaginilor, deschiderea fiecărui url și preluarea imaginii, analizarea ei, folosirea API-ului WordMuse și detectarea similarității ajunge să dureze în medie 60-70 de secunde pentru o cerere în care se analizează 100 de imagini, timpul crescând în mod evident o dată cu creșterea numărului de imagini. Soluția pentru a optimiza acest proces este folosirea unui sistem de cache, astfel încât cererile consecutive cu imagini etichetate identic de către rețea se vor rezolva mult mai repede, fiind necesar doar timpul de analiză al imaginii inițiale și accesarea sistemului de cache.
