@@ -85,12 +85,12 @@ Primește identificatorul utilizatorului, imaginea în base64 și opțiunea priv
 \subsection{Rețeaua neurală folosită}
 Rețeaua neurală folosită pentru analiza imaginilor este un model numit \textit{NASNet Mobile}, obținut de Google prin \textit{framework}-ul NAS(Neural Architecture Search) și discutat în lucrarea \textit{Learning Transferable Architectures for Scalable Image Recognition}. \cite{DBLP:journals/corr/ZophVSL17}
 
-Proiectul \textit{AutoML}, prin \textit{framework}-ul NAS, propune următorul lucru: o rețea neurală controler propune o arhitectură de rețea "copil" care va fi antrenată și evaluată pe o anumită sarcină. Evaluarea este folosită pentru a calibra rețeaua controler, care va propune idei îmbunătățite de arhitectură la iterația următoare. Procesul se repetă de mii de ori, generând noi arhitecturi , testându-le și evaluându-le până când se obțin arhitecturi de rețele neurale noi utile.\cite{45826}
+Proiectul \textit{AutoML}, prin \textit{framework}-ul NAS, propune următorul lucru: o rețea neurală controler propune o arhitectură de rețea "copil" care va fi antrenată și evaluată pe o anumită sarcină. Evaluarea este folosită pentru a calibra rețeaua controler, care va propune idei îmbunătățite de arhitectură la iterația următoare. Procesul se repetă de mii de ori, generând noi arhitecturi , testându-le și evaluându-le până când se obțin arhitecturi de rețele neurale noi utile.\cite{2016arXiv161101578Z}
 
 \begin{figure}[!htbp]
     \begin{center}
         \includegraphics[width=0.6\textwidth]{images/nas.png}
-        \caption{Procesul de obținere a noi rețele neurale folosind NAS \cite{45826}}
+        \caption{Procesul de obținere a noi rețele neurale folosind NAS \cite{2016arXiv161101578Z}}
     \end{center}
 \end{figure}
 

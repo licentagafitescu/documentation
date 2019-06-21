@@ -57,10 +57,10 @@ Sebastian Raschka.
 \newblock
   \url{https://www.kdnuggets.com/2016/06/visual-explanation-backpropagation-algorithm-neural-networks.html}.
 
-\bibitem{45826}
-Barret Zoph and Quoc~V. Le.
-\newblock Neural architecture search with reinforcement learning.
-\newblock 2017.
+\bibitem{2016arXiv161101578Z}
+Barret {Zoph} and Quoc~V. {Le}.
+\newblock {Neural Architecture Search with Reinforcement Learning}.
+\newblock {\em arXiv e-prints}, page arXiv:1611.01578, Nov 2016.
 
 \bibitem{DBLP:journals/corr/ZophVSL17}
 Barret Zoph, Vijay Vasudevan, Jonathon Shlens, and Quoc~V. Le.

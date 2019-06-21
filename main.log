@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.17)  21 JUN 2019 16:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.17)  21 JUN 2019 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -478,33 +478,43 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(d:/texlive2/2019/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+\col@sep=\dimen131
+\ar@mcellbox=\box31
+\extrarowheight=\dimen132
+\NC@list=\toks24
+\extratabsurround=\skip47
+\backup@length=\skip48
+\ar@cellbox=\box32
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 32.
 
 (d:/texlive2/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 30.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 32.
 
 (d:/texlive2/2019/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
@@ -546,16 +556,16 @@ File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 (d:/texlive2/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count124
-\scratchdimen=\dimen131
-\scratchbox=\box31
+\scratchdimen=\dimen133
+\scratchbox=\box33
 \nofMPsegments=\count125
 \nofMParguments=\count126
-\everyMPshowfont=\toks24
+\everyMPshowfont=\toks25
 \MPscratchCnt=\count127
-\MPscratchDim=\dimen132
+\MPscratchDim=\dimen134
 \MPnumerator=\count128
 \makeMPintoPDFobject=\count129
-\everyMPtoPDFconversion=\toks25
+\everyMPtoPDFconversion=\toks26
 ) (d:/texlive2/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -573,8 +583,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 30.
+\AtBeginShipoutBox=\box34
+Package hyperref Info: Link coloring OFF on input line 32.
 
 (d:/texlive2/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -584,9 +594,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count130
 )
-LaTeX Info: Redefining \ref on input line 30.
-LaTeX Info: Redefining \pageref on input line 30.
-LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
 
 (./main.out) (./main.out)
 \@outlinefile=\write3
@@ -596,7 +606,7 @@ LaTeX Info: Redefining \nameref on input line 30.
  (./front/macros.tex) (./front/cover.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 9.
-<images/logoFii.png, id=148, 193.47281pt x 188.95593pt>
+<images/logoFii.png, id=180, 193.47281pt x 188.95593pt>
 File: images/logoFii.png Graphic file (type png)
 <use images/logoFii.png>
 Package pdftex.def Info: images/logoFii.png  used on input line 13.
@@ -628,13 +638,13 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <6> not available
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40     \input
+l.42     \input
                {front/declaration2} [1] (./front/declaration2.tex)pdfTeX warnin
 g (ext4): destination with the same identifier (name{page.}) has been already u
 sed, duplicate ignored
 <to be read again> 
                    \relax 
-l.41 
+l.43 
       [2] (./main.tocpdfTeX warning (ext4): destination with the same identifie
 r (name{page.}) has been already used, duplicate ignored
 <to be read again> 
@@ -665,12 +675,12 @@ in den-drite []i trans-mite informa[]ie
 [5
 
 ]
-<images/perceptron.png, id=236, 642.4pt x 371.3875pt>
+<images/perceptron.png, id=276, 642.4pt x 371.3875pt>
 File: images/perceptron.png Graphic file (type png)
 <use images/perceptron.png>
 Package pdftex.def Info: images/perceptron.png  used on input line 25.
 (pdftex.def)             Requested size: 318.66948pt x 184.2369pt.
-<images/retea.png, id=238, 599.23875pt x 325.215pt>
+<images/retea.png, id=278, 599.23875pt x 325.215pt>
 File: images/retea.png Graphic file (type png)
 <use images/retea.png>
 Package pdftex.def Info: images/retea.png  used on input line 42.
@@ -684,7 +694,7 @@ Overfull \hbox (8.8253pt too wide) in paragraph at lines 77--78
 []iale ale func[]iei de cost []^^Pn func[]ie
  []
 
-<images/backpropagation.png, id=259, 486.81876pt x 357.335pt>
+<images/backpropagation.png, id=299, 486.81876pt x 357.335pt>
 File: images/backpropagation.png Graphic file (type png)
 <use images/backpropagation.png>
 Package pdftex.def Info: images/backpropagation.png  used on input line 84.
@@ -696,14 +706,14 @@ t/12 po-o-ling\OT1/ppl/m/n/12 , dar la fi-nal apar []i stra-turi conectate(\OT1
 /ppl/m/it/12 fully-
  []
 
-<images/convolutional_network.png, id=274, 375.4025pt x 89.33376pt>
+<images/convolutional_network.png, id=314, 375.4025pt x 89.33376pt>
 File: images/convolutional_network.png Graphic file (type png)
 <use images/convolutional_network.png>
 Package pdftex.def Info: images/convolutional_network.png  used on input line 9
 8.
 (pdftex.def)             Requested size: 364.19667pt x 86.6727pt.
 [9 <./images/backpropagation.png> <./images/convolutional_network.png>]
-<images/filtru.png, id=286, 738.50906pt x 572.1375pt>
+<images/filtru.png, id=326, 738.50906pt x 572.1375pt>
 File: images/filtru.png Graphic file (type png)
 <use images/filtru.png>
 Package pdftex.def Info: images/filtru.png  used on input line 110.
@@ -712,13 +722,13 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 116.
 
 [10 <./images/filtru.png>]
-<images/pooling.png, id=294, 247.92625pt x 211.28937pt>
+<images/pooling.png, id=335, 247.92625pt x 211.28937pt>
 File: images/pooling.png Graphic file (type png)
 <use images/pooling.png>
 Package pdftex.def Info: images/pooling.png  used on input line 121.
 (pdftex.def)             Requested size: 318.66948pt x 271.59721pt.
  [11 <./images/pooling.png>] [12]
-<images/oauth.png, id=313, 514.92375pt x 489.83pt>
+<images/oauth.png, id=354, 514.92375pt x 489.83pt>
 File: images/oauth.png Graphic file (type png)
 <use images/oauth.png>
 Package pdftex.def Info: images/oauth.png  used on input line 164.
@@ -750,12 +760,12 @@ Capitolul 3.
 [18
 
 ]
-<images/use_case.png, id=347, 637.63219pt x 341.02406pt>
+<images/use_case.png, id=387, 637.63219pt x 341.02406pt>
 File: images/use_case.png Graphic file (type png)
 <use images/use_case.png>
 Package pdftex.def Info: images/use_case.png  used on input line 26.
 (pdftex.def)             Requested size: 409.71692pt x 219.12885pt.
-<images/arhitectura.png, id=348, 709.14937pt x 566.86781pt>
+<images/arhitectura.png, id=388, 709.14937pt x 566.86781pt>
 File: images/arhitectura.png Graphic file (type png)
 <use images/arhitectura.png>
 Package pdftex.def Info: images/arhitectura.png  used on input line 37.
@@ -773,7 +783,7 @@ i-mi-lare eti-che-te-lor ob[]inute
  []
 
 [21]
-<images/secventa.png, id=383, 734.745pt x 573.64313pt>
+<images/secventa.png, id=423, 734.745pt x 573.64313pt>
 File: images/secventa.png Graphic file (type png)
 <use images/secventa.png>
 Package pdftex.def Info: images/secventa.png  used on input line 64.
@@ -781,24 +791,24 @@ Package pdftex.def Info: images/secventa.png  used on input line 64.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <17.28> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 69.
  [22 <./images/secventa.png>]
-<images/nas.png, id=396, 642.4pt x 293.095pt>
+<images/nas.png, id=437, 642.4pt x 293.095pt>
 File: images/nas.png Graphic file (type png)
 <use images/nas.png>
 Package pdftex.def Info: images/nas.png  used on input line 92.
 (pdftex.def)             Requested size: 273.14923pt x 124.62856pt.
  [23 <./images/nas.png>]
-<images/nasnet.png, id=410, 488.82625pt x 648.4225pt>
+<images/nasnet.png, id=451, 488.82625pt x 648.4225pt>
 File: images/nasnet.png Graphic file (type png)
 <use images/nasnet.png>
 Package pdftex.def Info: images/nasnet.png  used on input line 103.
 (pdftex.def)             Requested size: 341.43307pt x 452.91313pt.
  [24 <./images/nasnet.png (PNG copy)>]
-<images/nasnetcells.png, id=417, 979.66pt x 581.17125pt>
+<images/nasnetcells.png, id=458, 979.66pt x 581.17125pt>
 File: images/nasnetcells.png Graphic file (type png)
 <use images/nasnetcells.png>
 Package pdftex.def Info: images/nasnetcells.png  used on input line 118.
 (pdftex.def)             Requested size: 455.24411pt x 270.06448pt.
-<images/database.png, id=419, 184.43906pt x 205.5178pt>
+<images/database.png, id=460, 184.43906pt x 205.5178pt>
 File: images/database.png Graphic file (type png)
 <use images/database.png>
 Package pdftex.def Info: images/database.png  used on input line 130.
@@ -806,10 +816,26 @@ Package pdftex.def Info: images/database.png  used on input line 130.
  [25 <./images/nasnetcells.png>]) (./chapters/chapter4.tex
 [26 <./images/database.png>]
 Capitolul 4.
-) (./chapters/conclusions.tex [27
+[27
 
-]) (./chapters/bibliography.tex (./main.bbl
-[28
+]
+Overfull \hbox (3.28334pt too wide) in paragraph at lines 24--25
+[]\OT1/ppl/m/n/12 Pentru a re-a-liza au-ten-ti-fi-ca-rea pe plat-forma Fli-ckr 
+prin pro-to-co-lul OAuth, aplica[]ia
+ []
+
+[28]
+<images/neuralnetworks.png, id=484, 656.4525pt x 475.7775pt>
+File: images/neuralnetworks.png Graphic file (type png)
+<use images/neuralnetworks.png>
+Package pdftex.def Info: images/neuralnetworks.png  used on input line 37.
+(pdftex.def)             Requested size: 364.19667pt x 263.958pt.
+ [29] [30 <./images/neuralnetworks.png (PNG copy)>]
+(d:/texlive2/2019/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/02/27 1.8b listings language file
+))
+(./chapters/conclusions.tex [31]) (./chapters/bibliography.tex (./main.bbl
+[32
 
 ]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 7.
@@ -833,33 +859,33 @@ Overfull \hbox (12.32256pt too wide) in paragraph at lines 54--59
 etworks .
  []
 
-[29
+[33
 
-])) (./chapters/appendix.tex [30]
+])) (./chapters/appendix.tex [34]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 13.
- (./chapters/openapi.json [31
+ (./chapters/openapi.json [35
 
-] [32]
-[33] [34] [35]))
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
- [36]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
+] [36]
+[37] [38] [39]))
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 65.
+ [40]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4F9080C6A01C86DA350DD9DED4CF8B5E;5242.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
+(rerunfilecheck)             Checksum: B0B15AF1728B5169343BF8E26B6E742B;6664.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
  ) 
 Here is how much of TeX's memory you used:
- 13073 strings out of 492609
- 179546 string characters out of 6132344
- 335676 words of memory out of 5000000
- 16503 multiletter control sequences out of 15000+600000
+ 13453 strings out of 492609
+ 184109 string characters out of 6132344
+ 852491 words of memory out of 5000000
+ 16845 multiletter control sequences out of 15000+600000
  33587 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,10n,35p,1211b,1798s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,14n,42p,1211b,1803s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive2/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/texlive2/2019/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive2/2019/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive2/2019/texmf-dist/fonts/t
@@ -871,10 +897,10 @@ ive2/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><d:/texlive2/2019/texm
 f-dist/fonts/type1/urw/palatino/uplbi8a.pfb><d:/texlive2/2019/texmf-dist/fonts/
 type1/urw/palatino/uplr8a.pfb><d:/texlive2/2019/texmf-dist/fonts/type1/urw/pala
 tino/uplri8a.pfb>
-Output written on main.pdf (41 pages, 771232 bytes).
+Output written on main.pdf (45 pages, 861287 bytes).
 PDF statistics:
- 748 PDF objects out of 1000 (max. 8388607)
- 663 compressed objects within 7 object streams
- 294 named destinations out of 1000 (max. 500000)
- 364 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 835 PDF objects out of 1000 (max. 8388607)
+ 744 compressed objects within 8 object streams
+ 325 named destinations out of 1000 (max. 500000)
+ 433 words of extra memory for PDF output out of 10000 (max. 10000000)
 
