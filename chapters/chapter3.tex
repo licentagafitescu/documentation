@@ -1,11 +1,61 @@
-\chapter{Titlul celui de-al treilea capitol}
+\chapter{Analiză și proiectare}
 
-Amet venenatis urna cursus eget. Quam vulputate dignissim suspendisse in est ante. Proin nibh nisl condimentum id. Egestas maecenas pharetra convallis posuere morbi. Risus viverra adipiscing at in. Vulputate eu scelerisque felis imperdiet. Cras adipiscing enim eu turpis egestas pretium aenean pharetra. In aliquam sem fringilla ut morbi tincidunt augue. Montes nascetur ridiculus mus mauris. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae. In nibh mauris cursus mattis molestie a iaculis. Interdum consectetur libero id faucibus nisl tincidunt eget. Gravida in fermentum et sollicitudin ac orci. Suscipit adipiscing bibendum est ultricies. Etiam non quam lacus suspendisse. Leo urna molestie at elementum eu facilisis sed odio morbi. Egestas congue quisque egestas diam in arcu cursus. Amet consectetur adipiscing elit ut aliquam purus.
+\section{Scenarii de utilizare}
 
-\section{Titlul secțiunii 1}
+Utilizatorul poate efectua următoarele acțiuni:
+\subsection{Logare}
+Utilizatorul se loghează în aplicație, care îl va redirecta către platforma Flickr, pentru a efectua autentificarea prin intermediul acesteia.
 
-Eros donec ac odio tempor. Facilisi morbi tempus iaculis urna id volutpat. Faucibus in ornare quam viverra orci sagittis eu. Amet tellus cras adipiscing enim eu turpis egestas. Integer feugiat scelerisque varius morbi. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Bibendum arcu vitae elementum curabitur. Eu nisl nunc mi ipsum faucibus. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Cras adipiscing enim eu turpis egestas pretium. Quisque non tellus orci ac auctor augue mauris augue. Malesuada pellentesque elit eget gravida cum. Ut lectus arcu bibendum at. Massa id neque aliquam vestibulum morbi blandit. Posuere ac ut consequat semper viverra nam. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Morbi enim nunc faucibus a pellentesque sit amet porttitor eget. Eu feugiat pretium nibh ipsum consequat nisl vel. Nisl purus in mollis nunc sed.
+\subsection{Alege sursa imaginilor}
+Utilizatorul poate alege sursa imaginilor ce vor fi analizare: propriul profil, imaginile contactelor sale, sau imagini publice de pe platforma Flickr.
 
-\section{Titlul secțiunii 2}
+\subsection{Încarcă imagine}
+Pentru a efectua această acțiune, utilizatorul trebuie să fi trecut prin pasul de logare și eventual să fi ales sursa imaginilor. Dacă acesta nu a ales sursa imaginilor, în mod implicit aceasta este propriul profil. Scenariul acesta de utilizare presupune ca utilizatorul să aleagă o imagine de pe propriul dispozitiv pe care să o trimită către aplicație.
 
-Elementum sagittis vitae et leo duis ut diam quam nulla. Purus sit amet volutpat consequat mauris nunc. Tincidunt augue interdum velit euismod in pellentesque massa. Nunc sed augue lacus viverra vitae congue. Porttitor leo a diam sollicitudin. Faucibus pulvinar elementum integer enim. Adipiscing bibendum est ultricies integer quis auctor elit. Blandit aliquam etiam erat velit scelerisque in. A iaculis at erat pellentesque adipiscing commodo elit at. Erat nam at lectus urna duis. Consequat ac felis donec et. Fermentum posuere urna nec tincidunt praesent semper feugiat nibh sed. Proin gravida hendrerit lectus a. Pretium viverra suspendisse potenti nullam ac tortor vitae purus. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. Gravida arcu ac tortor dignissim convallis aenean. Quam nulla porttitor massa id neque aliquam vestibulum morbi. Sed viverra ipsum nunc aliquet. Quis enim lobortis scelerisque fermentum dui faucibus in.
+Pentru a returna imaginile similare din punct de vedere vizual, aplicația va efectua următoarele acțiuni:
+\begin{enumerate}
+    \item Analizează imaginea încărcată folosind o rețea neurală și returnează o serie de etichete descriptive
+    \item Aduce imaginile  din sursa selectată de utilizator
+    \item Analizează imaginile aduse, obținând pentru fiecare o serie de etichete
+    \item Descoperă similaritatea între imagini comparând etichetele și obține o listă de imagini corespunzătoare
+    \item Afișează imaginile din lista obținută
+\end{enumerate}{}
+
+ \begin{figure}[!htbp]
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{images/use_case.png}
+        \caption{Diagrama de scenarii de utilizare a aplicației}
+    \end{center}
+\end{figure}
+
+
+\section{Arhitectura aplicației}
+Aplicația este împărțită în două module, dar folosește și anumite servicii externe.Utilizatorul interacționează direct cu modulul  \textit{front-end}, o aplicație web realizată cu ajutorul \textit{framework}-ului Angular în limbajul Typescript. La rândul său, modulul este împărțit în mai multe componente, acestea apelând unele servicii. Modulul de back-end este realizat cu ajutorul \textit{framework}-ului Flask în limbajul Python. Se folosesc mai multe biblioteci pentru a efectua anumite operații(ex. \textit{requests} pentru a apela API-uri, \textit{pony.orm} pentru conectarea la baza de date) și \textit{framework}-uri specializate pentru rețele neuronale(Tensorflow și Keras). Serviciile externe sunt reprezentate de API-urile platformelor Flickr(pentru autentificare, informații despre profil și imagini) și DataMuse(pentru a obține sinonime). De asemenea se mai folosește o bază de date SQLite pentru reținerea \textit{token}-ului de acces și identificatorului unic.
+
+ \begin{figure}[!htbp]
+    \begin{center}
+        \includegraphics[width=1.0\textwidth]{images/arhitectura.png}
+        \caption{Arhitectura aplicației}
+    \end{center}
+\end{figure}
+
+\section{Planificarea activităților realizate de către aplicație}
+Fluxul de activități în cadrul aplicației se desfășoară în modul urmator
+\begin{enumerate}
+    \item Modulul \textit{front-end} afișează pagina de logare și redirectează utilizatorul la procesul de logare de pe \textit{back-end} (Home Component)
+    \item Modulul \textit{back-end} trimite cererea de logare prin OAuth la API-ul Flickr
+    \item  Se salvează \textit{request token}-ului și redirectarea la autorizarea OAuth prin API-ul Flickr
+    \item  Se generează un identificator unic pentru utilizator, se salvează în baza de date împreună cu \textit{token}-ul de acces primit și apoi se face redirectarea către \textit{front-end} trimițând și identificatorul unic
+    \item Modulul \textit{front-end} reține identificatorul utilizatorului și cere  datele despre profil 
+    \item Modulul \textit{back-end} furnizează datele despre profil(nume utilizator, imagine de profil)
+    \item \textit{Front-end}-ul redirectează utilizatorul la pagina de încărcare imagini (Login Component)
+    \item Aici i se oferă utilizatorului posibilitatea de a încărca o imagine și de a alege sursa imaginilor, apoi trimite la modulul \textit{back-end} aceste informații (Image Upload Component)
+    \item Modulul \textit{back-end} primește imaginea și opțiunile privitoare la sursă și  analizează imaginea cu o rețea neurală, obținând o listă de etichete
+    \item Se apelează API-ul DataMuse pentru a obține cuvinte similare etichetelor obținute
+    \item Se apelează API-ul Flickr pentru a obține imagini și acestea se  analizează cu rețeaua neurală
+    \item Se compară etichetele imaginilor cu etichetele imaginii încărcate și se creează o listă de imagini similare
+    \item Se returnează lista către \textit{front-end}
+    \item \textit{Front-end}-ul afișează imaginile returnate de \textit{back-end} (Image Upload Component)
+\end{enumerate}{}
+
+

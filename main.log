@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.17)  19 JUN 2019 17:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.17)  21 JUN 2019 12:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -389,7 +389,7 @@ LaTeX Info: Redefining \nameref on input line 28.
  (./front/macros.tex) (./front/cover.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 9.
-<images/logoFii.png, id=88, 193.47281pt x 188.95593pt>
+<images/logoFii.png, id=124, 193.47281pt x 188.95593pt>
 File: images/logoFii.png Graphic file (type png)
 <use images/logoFii.png>
 Package pdftex.def Info: images/logoFii.png  used on input line 13.
@@ -428,18 +428,24 @@ sed, duplicate ignored
 <to be read again> 
                    \relax 
 l.39 
-      [2] (./main.toc)
+      [2] (./main.tocpdfTeX warning (ext4): destination with the same identifie
+r (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.27 ...\IeC {\u a} imagine}{18}{subsection.3.1.3}
+                                                  % [3
+
+])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- (./chapters/motivation.tex [1
 
-])
-(./chapters/introduction.tex [2
+(./chapters/motivation.tex [1]) (./chapters/introduction.tex [2
 
 ] [3
 
-]) (./chapters/chapter1.tex [4]
+])
+(./chapters/chapter1.tex [4]
 Capitolul 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 4.
@@ -452,12 +458,12 @@ in den-drite []i trans-mite informa[]ie
 [5
 
 ]
-<images/perceptron.png, id=157, 642.4pt x 371.3875pt>
+<images/perceptron.png, id=206, 642.4pt x 371.3875pt>
 File: images/perceptron.png Graphic file (type png)
 <use images/perceptron.png>
 Package pdftex.def Info: images/perceptron.png  used on input line 25.
 (pdftex.def)             Requested size: 318.66948pt x 184.2369pt.
-<images/retea.png, id=159, 599.23875pt x 325.215pt>
+<images/retea.png, id=208, 599.23875pt x 325.215pt>
 File: images/retea.png Graphic file (type png)
 <use images/retea.png>
 Package pdftex.def Info: images/retea.png  used on input line 42.
@@ -471,7 +477,7 @@ Overfull \hbox (8.8253pt too wide) in paragraph at lines 77--78
 []iale ale func[]iei de cost []^^Pn func[]ie
  []
 
-<images/backpropagation.png, id=181, 486.81876pt x 357.335pt>
+<images/backpropagation.png, id=229, 486.81876pt x 357.335pt>
 File: images/backpropagation.png Graphic file (type png)
 <use images/backpropagation.png>
 Package pdftex.def Info: images/backpropagation.png  used on input line 84.
@@ -483,14 +489,14 @@ t/12 po-o-ling\OT1/ppl/m/n/12 , dar la fi-nal apar []i stra-turi conectate(\OT1
 /ppl/m/it/12 fully-
  []
 
-<images/convolutional_network.png, id=195, 375.4025pt x 89.33376pt>
+<images/convolutional_network.png, id=244, 375.4025pt x 89.33376pt>
 File: images/convolutional_network.png Graphic file (type png)
 <use images/convolutional_network.png>
 Package pdftex.def Info: images/convolutional_network.png  used on input line 9
 8.
 (pdftex.def)             Requested size: 364.19667pt x 86.6727pt.
 [9 <./images/backpropagation.png> <./images/convolutional_network.png>]
-<images/filtru.png, id=208, 738.50906pt x 572.1375pt>
+<images/filtru.png, id=256, 738.50906pt x 572.1375pt>
 File: images/filtru.png Graphic file (type png)
 <use images/filtru.png>
 Package pdftex.def Info: images/filtru.png  used on input line 110.
@@ -499,27 +505,68 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <14.4> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 116.
 
 [10 <./images/filtru.png>]
-<images/pooling.png, id=216, 247.92625pt x 211.28937pt>
+<images/pooling.png, id=264, 247.92625pt x 211.28937pt>
 File: images/pooling.png Graphic file (type png)
 <use images/pooling.png>
 Package pdftex.def Info: images/pooling.png  used on input line 121.
 (pdftex.def)             Requested size: 318.66948pt x 271.59721pt.
  [11 <./images/pooling.png>] [12]
-<images/oauth.png, id=235, 514.92375pt x 489.83pt>
+<images/oauth.png, id=283, 514.92375pt x 489.83pt>
 File: images/oauth.png Graphic file (type png)
 <use images/oauth.png>
 Package pdftex.def Info: images/oauth.png  used on input line 164.
 (pdftex.def)             Requested size: 364.19667pt x 346.4588pt.
  [13 <./images/oauth.png>]) (./chapters/chapter2.tex [14]
 Capitolul 2.
-) (./chapters/chapter3.tex [15
+[15
 
 ]
-Capitolul 3.
-[16
+Overfull \hbox (3.0199pt too wide) in paragraph at lines 16--17
+[]\OT1/ppl/m/n/12 O solu[]ie ce la prima ve-dere pare c[]a ar re-zolva pro-blem
+a ex-pus[]a ar fi chiar c[]autarea
+ []
 
-]) (./chapters/conclusions.tex [17]) (./chapters/bibliography.tex
-(./main.bbl [18
+
+Overfull \hbox (24.29376pt too wide) in paragraph at lines 22--23
+\OT1/ppl/m/n/12 ima-gini, cel mai cu-nos-cut pen-tru aceast[]a func[]ionalitate
+ fi-ind chiar Go-o-gle. Func[]ionalitatea
+ []
+
+[16]) (./chapters/chapter3.tex
+Overfull \hbox (1.90353pt too wide) in paragraph at lines 25--1
+\OT1/ppl/m/n/12 pre-cum Clo-u-d-Vi-sion de la Go-o-gle Cloud Plat-form, Com-pu-
+ter-Vi-sion de la Ama-zonWeb-
+ []
+
+[17]
+Capitolul 3.
+[18
+
+]
+<images/use_case.png, id=317, 637.63219pt x 341.02406pt>
+File: images/use_case.png Graphic file (type png)
+<use images/use_case.png>
+Package pdftex.def Info: images/use_case.png  used on input line 26.
+(pdftex.def)             Requested size: 409.71692pt x 219.12885pt.
+<images/arhitectura.png, id=318, 709.14937pt x 566.86781pt>
+File: images/arhitectura.png Graphic file (type png)
+<use images/arhitectura.png>
+Package pdftex.def Info: images/arhitectura.png  used on input line 37.
+(pdftex.def)             Requested size: 455.24411pt x 363.90997pt.
+ [19 <./images/use_case.png>] [20 <./images/arhitectura.png>]
+Overfull \hbox (3.41357pt too wide) in paragraph at lines 52--53
+\OT1/ppl/m/n/12 ima-gi-ni-lor, apoi tri-mite la mo-du-lul \OT1/ppl/m/it/12 back
+-end \OT1/ppl/m/n/12 aceste informa[]ii (Image Upload Com-
+ []
+
+
+Overfull \hbox (2.24907pt too wide) in paragraph at lines 54--55
+[]\OT1/ppl/m/n/12 Se ape-leaz[]a API-ul Da-ta-Muse pen-tru a ob[]ine cu-vinte s
+i-mi-lare eti-che-te-lor ob[]inute 
+ []
+
+) (./chapters/conclusions.tex [21]) (./chapters/bibliography.tex (./main.bbl
+[22
 
 ]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 7.
@@ -545,7 +592,7 @@ etworks .
 
 ))
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 58.
- [19
+ [23
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
@@ -553,17 +600,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 58.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 58.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: ACBC27A079B7FFB7EE1072184A4F1F6F;2584.
+(rerunfilecheck)             Checksum: 57C674004B94242455BE8BAD16C47630;4417.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 58.
  ) 
 Here is how much of TeX's memory you used:
- 10338 strings out of 492609
- 143173 string characters out of 6132344
+ 10390 strings out of 492609
+ 143851 string characters out of 6132344
  242329 words of memory out of 5000000
- 14034 multiletter control sequences out of 15000+600000
+ 14050 multiletter control sequences out of 15000+600000
  32484 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,10n,28p,987b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,10n,28p,1211b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive2/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/texlive2/2019/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive2/2019/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive2/2019/texmf-dist/fonts/t
@@ -575,10 +622,10 @@ ive2/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><d:/texlive2/2019/texm
 f-dist/fonts/type1/urw/palatino/uplbi8a.pfb><d:/texlive2/2019/texmf-dist/fonts/
 type1/urw/palatino/uplr8a.pfb><d:/texlive2/2019/texmf-dist/fonts/type1/urw/pala
 tino/uplri8a.pfb>
-Output written on main.pdf (23 pages, 566470 bytes).
+Output written on main.pdf (28 pages, 625046 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
- 291 compressed objects within 3 object streams
- 74 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 438 PDF objects out of 1000 (max. 8388607)
+ 377 compressed objects within 4 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

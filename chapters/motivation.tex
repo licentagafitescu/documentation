@@ -3,4 +3,5 @@
 
 Această lucrare descrie scopul, implementarea și rezultatele aplicației web {\applicationtitle}, o aplicație web ce permite utilizatorului să se conecteze cu ajutorului contului de \textit{Flickr}, să încarce în aplicație o imagine, iar apoi să vizualizeze imaginile similare din punct de vedere vizual. În funcție de preferințele utilizatorului, imaginile vor fi preluate de pe profilul său, imaginile publice ale contactelor sale sau imaginile publice relevante de pe platforma \textit{Flickr}.
 
-Modulul de \textit{back-end} al aplicației este scris în Python, folosește Flask pentru a expune un API și Tensorflow și Keras pentru partea de rețele neuronale.\textit{Front-end}-ul aplicației este realizat în Typescript, utilizând platforma Angular. Aplicația este găzduită în \textit{cloud}, pe platforma Google Cloud Platform, această soluție fiind aleasă datorită fiabilității și posibilității de scalare.
+Modulul de \textit{back-end} al aplicației este scris în Python, folosind Flask pentru a expune un API.
+Analiza imaginilor este făcută cu ajutorul unui model de rețea neurală convoluțională, folosind \textit{framework}-urile Tensorflow și Keras.\textit{Front-end}-ul aplicației este realizat în Typescript, utilizând platforma Angular. Sursa imaginilor este platforma \textit{Flickr}, imaginile fiind accesate folosind \textit{Flickr API}.

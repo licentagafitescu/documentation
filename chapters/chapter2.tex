@@ -1,1 +1,25 @@
 \chapter{Scopuri și cerințe}
+\section{Necesitatea aplicației}
+Aplicația {\applicationtitle} permite utilizatorului să vizualizeze imagini similare vizual cu o imagine încărcată, având posibilitatea selecției sursei imaginilor: propriul profil de Flickr, conturile contactelor sale, sau imagini relevante publice de pe Flickr. Astfel, utilizatorul obține o selecție de imagini similare prin prisma conținutului, ci nu al altor meta-date( locația imaginii, data la care a fost realizată, etc). 
+
+Un exemplu în care {\applicationtitle} se dovedește utilă este următorul: Utilizatorul dorește să revadă imaginile cu castelele vizitate postate pe profilul său de Flickr. Deoarece vizitele au fost la intervale diferite de timp, este clar că o căutare după o perioadă de timp nu îi va răspunde cerințelor. De asemenea, cum castelele se află în locuri diferite nici o căutare după locație nu va corespunde obiectivului. O căutare după titlu va eșua din nou, deoarece utilizatorul și-a numit fotografiile folosind doar numele castelelor vizitate, evident diferite. Folosind aplicația {\applicationtitle}, utilizatorul va încărca o imagine cu un castel și va selecta faptul că dorește să vadă doar imagini de pe propriul profil. Aplicația va analiza imaginile de pe profilul său, afișând doar cele în care apar castele și astfel răspunzând cerinței utilizatorului.
+
+\section{Modul în care aplicația rezolvă problema vizată}
+Utilizatorul se va autentifica în aplicație cu contul său de Flickr, astfel oferind aplicației acces la imaginile personale și la lista de contacte. După autentificare, utilizatorul va încărca o imagine în aplicație și va selecta sursa imaginilor ce vor fi analizate (în mod general, sursa este profilul personal de Flickr).
+
+Imaginea încărcată este analizată cu ajutorul unei rețele neurale, analiză în urma căreia se obțin anumite etichete ce descriu conținutul imaginii. Imaginile din sursa selectată de utilizator vor fi la rândul lor analizate cu aceeași rețea, etichetele obținute fiind comparate cu lista inițială de etichete, similaritatea conținutului fiind detectată prin existența etichetelor identice în imagini diferite.
+
+Imaginile care au etichete ce apar și în lista de etichete a imaginii încărcate vor fi afișate în aplicație.
+
+\section{Comparația cu soluții existente}
+
+O soluție ce la prima vedere pare că ar rezolva problema expusă ar fi chiar căutarea oferită de \textit{Flickr}. Însă, căutarea după anumite cuvinte cheie se realizează verificând existența cuvintelor în titlul, descrierea și lista de etichete ale imaginii. Astfel soluția de căutare nu oferă garanția faptului că ceea ce căutăm se află chiar în conținutul imaginii, titlul, descrierea și etichetele fiind alese de către utilizator după preferințele sale.
+
+\subsection{SimilarityPivot}
+SimilarityPivot este o unealtă oferită de Flickr care folosește rețele neurale pentru a analiza imaginile și a găsi imagini care au o anumită mărime, orientare sau paletă de culori. SimilarityPivot se poate combina cu căutarea după cuvinte cheie pentru a returna imagini ce conțin în titlu, descriere sau etichete acele cuvinte și în același timp respectă și cerințele vizuale descrise mai sus. Diferența între SimilarityPivot și {\applicationtitle} constă în faptul că SimilarityPivot analizează în mod general imaginea, căutând doar anumite criterii vizuale(precum paleta de culori), în timp ce {\applicationtitle} analizează imaginea pentru a descoperi etichete care să îi reprezinte conținutul. Astfel, cele două aplicații prezintă scenarii de utilizare diferite.
+
+\subsection{Reverse image search}
+Există mai multe sit-uri ce oferă posibilitatea de a efectua o căutare inversă după imagini, cel mai cunoscut pentru această funcționalitate fiind chiar Google. Funcționalitatea oferită de Google oferă utilizatorului posibilitatea să încarce o imagine, analizează imaginea și returnează o etichetă ce descrie conținutul imaginii. De asemenea, prezintă sit-uri care corespund etichetei returnate și afișează imagini similare din punct de vedere vizual. Totuși, spre deosebire de o căutare uzuală, pentru acest tip de căutare nu se poate restrânge domeniul căutării la un singur sit, deci imaginile similare vor fi aduse de pe întreg web-ul, nu de pe o platformă specificată. De asemenea, căutarea poate găsi doar imagini publice, nu și imagini vizibile doar unui anumit utilizator(de pe profilul său, sau imagini ale contactelor cu vizibilitate doar pentru lista de prieteni). Astfel, diferența între soluțiile de căutare inversă după imagini și {\applicationtitle} constă în domeniul căutării, precum și posibilitatea {\applicationtitle} de a accesa fotografii vizibile doar unui utilizator autentificat.
+
+\subsection{Servicii pentru analiza imaginilor}
+Platformele de \textit{cloud computing} oferă și servicii de analiză vizuală a imaginilor, precum CloudVision de la Google Cloud Platform, ComputerVision de la AmazonWebServices, și ComputerVision de la Microsoft Azure Cloud. Toate aceste servicii pot fi folosite pentru a realiza aplicații similare {\applicationtitle}, însă nu reprezintă în sine o soluție la problema expusă.

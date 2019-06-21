@@ -6,9 +6,9 @@ O rețea neurală este un ansamblu interconectat de elemente de procesare simple
 
 În biologie, fiecare neuron primește informație prin dendrite și transmite  informație prin axon, doar atunci când a primit suficientă informație de la neuronii conectați la dendritele sale. Astfel, un neuron va transmite informația mai departe atunci când cantitatea de informație primită depășește un anumit \textit{prag}.
 
-Neuronii artificiali sunt construiți pe același principiu: dendritele vor fi echivalate de conexiuni către unitate, iar axonul de către o conexiune pornind de la acea unitate. Fiecare sinapsă( conexiune inter-neuronală) va fi caracterizată de o anumită \textit{pondere} astfel încât datele de intrare primite prin acea conexiune vor fi multipilicate cu acea pondere înainte de a fi transmise la neuronul artificial. Aici, semnalele ponderate sunt însumate pentru a forma o \textit{activare}.
+Neuronii artificiali sunt construiți pe același principiu: dendritele vor fi echivalate de conexiuni către unitate, iar axonul de către o conexiune pornind de la acea unitate. Fiecare sinapsă( conexiune inter-neuronală) va fi caracterizată de o anumită \textit{pondere} astfel încât datele de intrare primite prin acea conexiune vor fi multiplicate cu acea pondere înainte de a fi transmise la neuronul artificial. Aici, semnalele ponderate sunt însumate pentru a forma o \textit{activare}.
 
-În cadrul nodului, dacă \textit{activarea} va depăși un anumit \textit{prag}, unitatea va transmite mai departe o valoare(de obicei 1), altfel nu transmite nimic. Compararea cu pragul de activare se face folosind o funcție de activare. Matematic, pentru datele de intrare reprezentate de $x_1 .. x_n$ și ponderilele reprezentate de $w_1 ... w_n$, neuronul artificial funcționează astfel: 
+În cadrul nodului, dacă \textit{activarea} va depăși un anumit \textit{prag}, unitatea va transmite mai departe o valoare(de obicei 1), altfel nu transmite nimic. Compararea cu pragul de activare se face folosind o funcție de activare. Matematic, pentru datele de intrare reprezentate de $x_1 .. x_n$ și ponderile reprezentate de $w_1 ... w_n$, neuronul artificial funcționează astfel: 
 
 \[
 output =
@@ -35,7 +35,7 @@ De-a lungul istoriei, au fost folosite mai multe tipuri de neuroni, fiecare avâ
 
 Deoarece de unul singur un neuron nu are putere de decizie prea mare, o rețea neurală va folosi mai mulți,  ieșirile unor neuroni constituind intrări pentru alți neuroni. Neuronii vor comunica între ei prin activarea/lipsa activării, astfel imitând transmiterea de semnale electrice din cadrul creierului uman. 
 
-O rețea neurală cu mai multe straturi de neuroni mai este numită și \textit{MultiLayerPerceptron}, deși de obicei sunt folosiți neuroni de tip sigmoid, nu perceptron. O rețea de tip este organizată tipic pe mai multe straturi, având urmatoarea structură:
+O rețea neurală cu mai multe straturi de neuroni mai este numită și \textit{MultiLayerPerceptron}, deși de obicei sunt folosiți neuroni de tip sigmoid, nu perceptron. O rețea de tip este organizată tipic pe mai multe straturi, având următoarea structură:
 
 \begin{figure}[!htbp]
     \begin{center}
@@ -63,7 +63,7 @@ Straturile rețelei:
 
 \end{enumerate}
 
-Pe lângă straturile descrise, o rețea neuronală mai are o funcție de cost folosită pentru a aproxima diferența dintre valoarea prezisă de rețea și valoarea reală. Mecanismul de antrenare utilizat la perceptron nu funcționează și aici, deoarece eroarea nu se propagă decât pe ultimul strat ascuns. Antrenarea unei rețele neurale are ca scop principal reducerea valorii funcției de cost, existând mai multe tehnici pentru a îmbunătați acest procedeu. Un rol foarte important în antrenarea unei rețele îl are algoritmul de \textit{Backpropagation}.
+Pe lângă straturile descrise, o rețea neuronală mai are o funcție de cost folosită pentru a aproxima diferența dintre valoarea prezisă de rețea și valoarea reală. Mecanismul de antrenare utilizat la perceptron nu funcționează și aici, deoarece eroarea nu se propagă decât pe ultimul strat ascuns. Antrenarea unei rețele neurale are ca scop principal reducerea valorii funcției de cost, existând mai multe tehnici pentru a îmbunătăți acest procedeu. Un rol foarte important în antrenarea unei rețele îl are algoritmul de \textit{Backpropagation}.
 
 \textit{\textbf{Backpropagation}}
 Când antrenăm un simplu perceptron, îi putem modifica instant ponderile în funcție de eroarea obținută (valoarea funcției de cost). În cazul unei rețele eroarea trebuie corectată la toate nivelele, nu doar la ultimul. Aici intervine algoritmul de \textit{Backpropagation}.
@@ -131,7 +131,7 @@ Există multe tipuri de arhitecturi de rețele convoluționale, însă mai toate
 
 \section{Keras și Tensorflow}
 \subsection{Tensorflow}
-Tensorflow este un \textit{framework} cu sursă deschisă  dezvoltat de Google și folosit pentru calcule numerice. Tensorflow oferă suport pentru învățare automată și \textit{deep learning}. Folosind diverse instrumente puse la dispoziție, utilizatorii pot construi modele de învățare automată la nivele diferite de abstractizare, de la modele construite pe baza unor serii de operații matematice la API-uri de nivel înalt pentru construirea de arhitecturi întregi prerealizate, cum ar fi rețele neurale sau regresori liniari.
+Tensorflow este un \textit{framework} cu sursă deschisă  dezvoltat de Google și folosit pentru calcule numerice. Tensorflow oferă suport pentru învățare automată și \textit{deep learning}. Folosind diverse instrumente puse la dispoziție, utilizatorii pot construi modele de învățare automată la nivele diferite de abstractizare, de la modele construite pe baza unor serii de operații matematice la API-uri de nivel înalt pentru construirea de arhitecturi întregi disponibile, cum ar fi rețele neurale sau regresori liniari.
 
 \subsection{Keras}
 Keras reprezintă un API de nivel foarte înalt dedicat rețelelor neurale, scris în Python și care poate rula pe mai multe platforme de învățare automată cum ar fi TensorFlow, CNTK sau Theano. A fost dezvoltat pentru a abstractiza la maximum procesul de creare a unei rețele neurale, având ca scop atât experimentarea rapidă, cât și construcția într-un mod facil a unei arhitecturi solide. Keras poate fi văzut ca o interfață simplă, consistentă, folosită pentru cazurile uzuale, ce se pliază peste un \textit{back-end} optimizat de \textit{deep learning} și învățare automată. Este extrem de modular, permițând reutilizarea de blocuri configurabile, dar și extensibil, utilizatorii având posibilitatea de a crea noi straturi, funcții de cost sau arhitecturi pentru idei de cercetare. 
@@ -170,7 +170,5 @@ Keras reprezintă un API de nivel foarte înalt dedicat rețelelor neurale, scri
 Angular este un \textit{framework} cu sursă deschisă dezvoltat de către Google pentru crearea de aplicații client  SPA (\textit{single-page application}) folosind HTML, CSS și TypeScript. O aplicație Angular este compusă din module, componente și servicii.
 
 \section{Flask}
-Flask este un \textit{microframework} WSGI(\textit{Web Server Gateway Interface}) pentru realizarea de aplicații web, scris in Python. Este cunoscut pentru simplitatea sa, dar și pentru posibilitatea de a se scala pentru aplicații oricât de complexe.
+Flask este un \textit{microframework} WSGI(\textit{Web Server Gateway Interface}) pentru realizarea de aplicații web, scris în Python. Este cunoscut pentru simplitatea sa, dar și pentru posibilitatea de a se scala pentru aplicații oricât de complexe.
 
-\section{Google Cloud Platform}
-Google CLoud Platform (GCP), oferită de Google, reprezintă o suită de servicii \textit{cloud computing} și unelte de infrastructură ce oferă utilizatorilor posibilitatea de a crea, găzdui și scala diverse aplicații. GCP oferă diverse servicii, în domenii precum: calcul, învățare automată, inteligență artificială, \textit{Internet of Things}, stocare, baze de date relaționale și nerelaționale, \textit{big data} , etc.
