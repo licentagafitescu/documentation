@@ -1,9 +1,20 @@
 \begin{thebibliography}{10}
 
+\bibitem{angular-components}
+***.
+\newblock Angular components.
+\newblock \url{https://angular.io/api/core/Component}.
+
 \bibitem{flickr-api}
 ***.
 \newblock Flickr api documentation.
 \newblock \url{https://www.flickr.com/services/api/}.
+
+\bibitem{http-requests}
+***.
+\newblock Http requests.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages#HTTP_Requests}.
 
 \bibitem{intuitive-explanation-conv}
 ***.
@@ -21,17 +32,44 @@
 \newblock Oauth core 1.0 revision a.
 \newblock \url{https://oauth.net/core/1.0a/}.
 
+\bibitem{open-api}
+***.
+\newblock Openapi - specifications.
+\newblock \url{https://github.com/OAI/OpenAPI-Specification}.
+
+\bibitem{python-web-applications}
+***.
+\newblock Python web applications.
+\newblock \url{https://realpython.com/python-web-applications/}.
+
 \bibitem{benchea-course}
 Răzvan Benchea.
 \newblock Neural networks.
 \newblock
   \url{https://sites.google.com/view/rbenchea/neural-networks?authuser=0}.
 
+\bibitem{auth-guards}
+Ryan Chenkie.
+\newblock Angular authentication: Using route guards.
+\newblock
+  \url{https://medium.com/@ryanchenkie_40935/angular-authentication-using-route-guards-bf7a4ca13ae3}.
+
 \bibitem{adi-from-perceptron}
 Adi Chris.
 \newblock From perceptron to deep neural nets.
 \newblock
   \url{https://becominghuman.ai/from-perceptron-to-deep-neural-nets-504b8ff616e}.
+
+\bibitem{pep-3333}
+P.J. Eby.
+\newblock Pep 3333 -- python web server gateway interface v1.0.1.
+\newblock \url{https://www.python.org/dev/peps/pep-3333/}.
+
+\bibitem{what-is-api}
+Perry Eising.
+\newblock What exactly is an api?
+\newblock
+  \url{https://medium.com/@perrysetgo/what-exactly-is-an-api-69f36968a41f}.
 
 \bibitem{Goodfellow-et-al-2016}
 Ian Goodfellow, Yoshua Bengio, and Aaron Courville.

@@ -50,7 +50,7 @@ Modulul \textit{front-end} este împărțit în 3 componente: HomeComponent, Log
 \end{figure}
 
 \pagebreak
-Modulul \textit{back-end} este împărțit în 3 componente principare: main.py, prediction.py și repository.py. Submodulul main are mai multe sarcini: 
+Modulul \textit{back-end} este o aplicație web \cite{python-web-applications} ce expune un API , împărțită în 3 componente principare: main.py, prediction.py și repository.py. Submodulul main are mai multe sarcini: 
 \begin{enumerate}
     \item Autentificarea cu Oauth
     \item Apelarea FlickrAPI
@@ -72,7 +72,7 @@ Submodulul prediction se ocupă de analiza imaginilor folosind o rețea neuronal
 \pagebreak
 \section{Comunicarea între componentele aplicației}
 Utilizatorul va comunica cu modulul de front-end pentru a trimite cereri și a primi informațiile corespunzătoare cererii sale. De asemenea utilizatorul va interacționa cu pagini afișate de Flickr în browser pentru a autoriza aplicația {\applicationtitle}.
-Modulul front-end comunică cu utilizatorul și cu modulul back-end. Comunicare cu modulul back-end se realizează prin trimiterea de cereri HTTP cărew un API pus la dispoziție de către back-end.
+Modulul front-end comunică cu utilizatorul și cu modulul back-end. Comunicare cu modulul back-end se realizează prin trimiterea de cereri HTTP \cite{http-requests} către un API pus la dispoziție de către back-end.
 Pe lângă comunicarea cu modulul front-end deja menționată, modulul back-end va mai apela doua API-uri: API-ul Flickr pentru preluarea de imagini și informații despre utilizator precum și autentificarea prin protocolul OAuth 1.0 și DateMuse API pentru preluarea de cuvinte similare ca înțeles unui cuvânt dat.
 
 
@@ -87,7 +87,9 @@ Pe lângă comunicarea cu modulul front-end deja menționată, modulul back-end 
 \section{Modulul \textit{back-end}}
 
 \subsection{API-ul expus}
-Specificația OPENApi a API-ului se găsește la ~\nameref{ch:anexa1}
+Un API (Application Programming Interface) este un set de rutine, protocoale  și unelte ce specifică modul în care componentele software interacționează.\cite{what-is-api}
+
+Specificația OPENApi\cite{open-api} a API-ului se găsește la ~\nameref{ch:anexa1}
 \subsubsection{/login}
 Endpoint pentru autentificare, utilizatorul este redirectat aici de către modulul \textit{front-end}. Aplicația va redirecta la rândul ei catre /authorize.
 

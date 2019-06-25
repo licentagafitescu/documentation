@@ -33,25 +33,25 @@
 \contentsline {subsubsection}{/addImage}{23}{section*.7}% 
 \contentsline {subsection}{\numberline {3.4.2}Re\IeC {\textcommabelow t}eaua neural\IeC {\u a} folosit\IeC {\u a}}{23}{subsection.3.4.2}% 
 \contentsline {subsection}{\numberline {3.4.3}Baza de date}{26}{subsection.3.4.3}% 
-\contentsline {chapter}{\numberline {4}Detalii de implementare}{27}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Implementarea aplica\IeC {\textcommabelow t}iei}{27}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Detaliile modulului front-end}{28}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}HomeComponent}{28}{subsection.4.2.1}% 
-\contentsline {subsection}{\numberline {4.2.2}LoginComponent}{29}{subsection.4.2.2}% 
-\contentsline {subsection}{\numberline {4.2.3}ImageUploadComponent}{29}{subsection.4.2.3}% 
-\contentsline {section}{\numberline {4.3}Detaliile modulului back-end}{30}{section.4.3}% 
-\contentsline {subsection}{\numberline {4.3.1}Autentificarea cu OAuth}{30}{subsection.4.3.1}% 
-\contentsline {subsection}{\numberline {4.3.2}Informa\IeC {\textcommabelow t}ii despre profil}{30}{subsection.4.3.2}% 
-\contentsline {subsection}{\numberline {4.3.3}Analiza unei imagini}{31}{subsection.4.3.3}% 
-\contentsline {subsection}{\numberline {4.3.4}Preluarea imaginilor de pe Flickr}{33}{subsection.4.3.4}% 
-\contentsline {subsubsection}{Folosirea metodei getPhotos}{33}{section*.8}% 
-\contentsline {subsubsection}{Folosirea metodei search}{33}{section*.9}% 
-\contentsline {subsection}{\numberline {4.3.5}Optimizarea procesului de returnare a imaginilor}{34}{subsection.4.3.5}% 
-\contentsline {subsubsection}{API-ul DataMuse}{34}{section*.10}% 
-\contentsline {subsubsection}{Sistem de cache}{35}{section*.11}% 
-\contentsline {chapter}{\numberline {5}Manual de utilizare}{36}{chapter.5}% 
-\contentsline {chapter}{Concluzii}{37}{chapter*.12}% 
-\contentsline {subsubsection}{\IeC {\^I}mbun\IeC {\u a}t\IeC {\u a}\IeC {\textcommabelow t}irea analizei imaginilor}{38}{section*.13}% 
-\contentsline {subsubsection}{Integrarea cu alte platforme}{38}{section*.14}% 
-\contentsline {chapter}{Bibliografie}{39}{chapter*.15}% 
-\contentsline {chapter}{Anexe}{41}{appendix*.16}% 
+\contentsline {chapter}{\numberline {4}Detalii de implementare}{28}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Implementarea aplica\IeC {\textcommabelow t}iei}{28}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Detaliile modulului front-end}{29}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}HomeComponent}{29}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}LoginComponent}{30}{subsection.4.2.2}% 
+\contentsline {subsection}{\numberline {4.2.3}ImageUploadComponent}{30}{subsection.4.2.3}% 
+\contentsline {section}{\numberline {4.3}Detaliile modulului back-end}{31}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Autentificarea cu OAuth}{31}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Informa\IeC {\textcommabelow t}ii despre profil}{32}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}Analiza unei imagini}{32}{subsection.4.3.3}% 
+\contentsline {subsection}{\numberline {4.3.4}Preluarea imaginilor de pe Flickr}{34}{subsection.4.3.4}% 
+\contentsline {subsubsection}{Folosirea metodei getPhotos}{34}{section*.8}% 
+\contentsline {subsubsection}{Folosirea metodei search}{35}{section*.9}% 
+\contentsline {subsection}{\numberline {4.3.5}Optimizarea procesului de returnare a imaginilor}{35}{subsection.4.3.5}% 
+\contentsline {subsubsection}{API-ul DataMuse}{35}{section*.10}% 
+\contentsline {subsubsection}{Sistem de cache}{36}{section*.11}% 
+\contentsline {chapter}{\numberline {5}Manual de utilizare}{37}{chapter.5}% 
+\contentsline {chapter}{Concluzii}{38}{chapter*.12}% 
+\contentsline {subsubsection}{\IeC {\^I}mbun\IeC {\u a}t\IeC {\u a}\IeC {\textcommabelow t}irea analizei imaginilor}{39}{section*.13}% 
+\contentsline {subsubsection}{Integrarea cu alte platforme}{39}{section*.14}% 
+\contentsline {chapter}{Bibliografie}{40}{chapter*.15}% 
+\contentsline {chapter}{Anexe}{42}{appendix*.16}% 

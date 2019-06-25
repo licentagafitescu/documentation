@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.17)  25 JUN 2019 21:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.6.17)  25 JUN 2019 21:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -778,7 +778,7 @@ File: images/front_end.png Graphic file (type png)
 Package pdftex.def Info: images/front_end.png  used on input line 47.
 (pdftex.def)             Requested size: 455.24411pt x 363.12582pt.
  [20 <./images/front_end.png>]
-<images/back_end.png, id=419, 614.295pt x 362.85562pt>
+<images/back_end.png, id=420, 614.295pt x 362.85562pt>
 File: images/back_end.png Graphic file (type png)
 <use images/back_end.png>
 Package pdftex.def Info: images/back_end.png  used on input line 66.
@@ -789,7 +789,7 @@ Overfull \hbox (4.63834pt too wide) in paragraph at lines 74--77
 me-nea uti-li-za-to-rul va interac[]iona
  []
 
-<images/secventa.png, id=431, 734.745pt x 573.64313pt>
+<images/secventa.png, id=434, 734.745pt x 573.64313pt>
 File: images/secventa.png Graphic file (type png)
 <use images/secventa.png>
 Package pdftex.def Info: images/secventa.png  used on input line 81.
@@ -797,29 +797,30 @@ Package pdftex.def Info: images/secventa.png  used on input line 81.
 [22 <./images/secventa.png>]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <17.28> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 87.
-<images/nas.png, id=441, 642.4pt x 293.095pt>
+ [23]
+<images/nas.png, id=459, 642.4pt x 293.095pt>
 File: images/nas.png Graphic file (type png)
 <use images/nas.png>
-Package pdftex.def Info: images/nas.png  used on input line 110.
+Package pdftex.def Info: images/nas.png  used on input line 112.
 (pdftex.def)             Requested size: 273.14923pt x 124.62856pt.
- [23]
-<images/nasnet.png, id=455, 488.82625pt x 648.4225pt>
+<images/nasnet.png, id=462, 488.82625pt x 648.4225pt>
 File: images/nasnet.png Graphic file (type png)
 <use images/nasnet.png>
-Package pdftex.def Info: images/nasnet.png  used on input line 121.
+Package pdftex.def Info: images/nasnet.png  used on input line 123.
 (pdftex.def)             Requested size: 341.43307pt x 452.91313pt.
-<images/nasnetcells.png, id=457, 979.66pt x 581.17125pt>
+<images/nasnetcells.png, id=464, 979.66pt x 581.17125pt>
 File: images/nasnetcells.png Graphic file (type png)
 <use images/nasnetcells.png>
-Package pdftex.def Info: images/nasnetcells.png  used on input line 136.
+Package pdftex.def Info: images/nasnetcells.png  used on input line 138.
 (pdftex.def)             Requested size: 455.24411pt x 270.06448pt.
-<images/database.png, id=459, 184.43906pt x 205.5178pt>
+ [24 <./images/nas.png>] [25 <./images/nasnet.png (PNG copy)>]
+<images/database.png, id=480, 184.43906pt x 205.5178pt>
 File: images/database.png Graphic file (type png)
 <use images/database.png>
-Package pdftex.def Info: images/database.png  used on input line 148.
+Package pdftex.def Info: images/database.png  used on input line 150.
 (pdftex.def)             Requested size: 182.09486pt x 202.90506pt.
- [24 <./images/nas.png>] [25 <./images/nasnet.png (PNG copy)>]) (./chapters/cha
-pter4.tex [26 <./images/nasnetcells.png> <./images/database.png>]
+) (./chapters/chapter4.tex [26 <./images/nasnetcells.png>]
+[27 <./images/database.png>]
 Capitolul 4.
 
 Overfull \hbox (3.41357pt too wide) in paragraph at lines 14--15
@@ -827,7 +828,7 @@ Overfull \hbox (3.41357pt too wide) in paragraph at lines 14--15
 -end \OT1/ppl/m/n/12 aceste informa[]ii (Image Upload Com-
  []
 
-[27
+[28
 
 ]
 Overfull \hbox (2.24907pt too wide) in paragraph at lines 16--17
@@ -835,56 +836,50 @@ Overfull \hbox (2.24907pt too wide) in paragraph at lines 16--17
 i-mi-lare eti-che-te-lor ob[]inute 
  []
 
-[28] [29]
-Overfull \hbox (3.28334pt too wide) in paragraph at lines 49--50
-[]\OT1/ppl/m/n/12 Pentru a re-a-liza au-ten-ti-fi-ca-rea pe plat-forma Fli-ckr 
-prin pro-to-co-lul OAuth, aplica[]ia
- []
-
-[30]
-<images/neuralnetworks.png, id=513, 656.4525pt x 475.7775pt>
+[29] [30] [31]
+<images/neuralnetworks.png, id=531, 656.4525pt x 475.7775pt>
 File: images/neuralnetworks.png Graphic file (type png)
 <use images/neuralnetworks.png>
-Package pdftex.def Info: images/neuralnetworks.png  used on input line 62.
+Package pdftex.def Info: images/neuralnetworks.png  used on input line 64.
 (pdftex.def)             Requested size: 364.19667pt x 263.958pt.
- [31 <./images/neuralnetworks.png (PNG copy)>]
+ [32 <./images/neuralnetworks.png (PNG copy)>]
 (d:/texlive2/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
-) [32]
+) [33]
 (d:/texlive2/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 )
 (d:/texlive2/2019/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 )
-LaTeX Font Info:    Try loading font information for OML+ppl on input line 149.
+LaTeX Font Info:    Try loading font information for OML+ppl on input line 151.
 
 
 (d:/texlive2/2019/texmf-dist/tex/latex/psnfss/omlppl.fd
 File: omlppl.fd 
 )
 LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 149.
- [33]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 181.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 151.
+ [34]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 183.
 
 
 (d:/texlive2/2019/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 181.
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 181.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 183.
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 183.
 
 
 (d:/texlive2/2019/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-))
-(./chapters/chapter5.tex [34] [35]
+) [35])
+(./chapters/chapter5.tex [36]
 Capitolul 5.
-) (./chapters/conclusions.tex [36
+) (./chapters/conclusions.tex [37
 
-] [37
+] [38
 
 ]) (./chapters/bibliography.tex
 (./main.bbl
@@ -893,39 +888,63 @@ Overfull \hbox (18.3063pt too wide) in paragraph at lines 20--1
 -ar adapta func[]ionalitatea aplica[]iei
  []
 
-[38]
+[39]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 6.
  (d:/texlive2/2019/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 2158) in paragraph at lines 59--64
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
+[]\OT1/ppl/m/n/12 ***.  Ope-napi - spe-ci-fi-ca-tions.  []$\OT1/pcr/m/n/12 http
+s : / / github . com / OAI /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--44
+[]\OT1/ppl/m/n/12 ***.  Py-thon web appli-ca-tions.  []$\OT1/pcr/m/n/12 https :
+ / / realpython . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--56
+[]\OT1/ppl/m/n/12 Ryan Chen-kie.  An-gu-lar au-then-ti-ca-tion: Using ro-ute gu
+-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--56
+\OT1/ppl/m/n/12 ards.  []$\OT1/pcr/m/n/12 https : / / medium . com / @ryanchenk
+ie _ 40935 /
+ []
+
+[40
+
+]
+Underfull \hbox (badness 2158) in paragraph at lines 97--102
 []\OT1/ppl/m/n/12 Sebastian Ras-chka.  A vi-sual ex-pla-na-tion of the back pro
 -pa-ga-tion al-go-
  []
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 59--64
+Underfull \hbox (badness 4378) in paragraph at lines 97--102
 \OT1/ppl/m/n/12 ri-thm for ne-u-ral ne-tworks.  []$\OT1/pcr/m/n/12 https : / / 
 www . kdnuggets . com / 2016 / 06 /
  []
 
 
-Overfull \hbox (12.32256pt too wide) in paragraph at lines 59--64
+Overfull \hbox (12.32256pt too wide) in paragraph at lines 97--102
 \OT1/pcr/m/n/12 visual-[]explanation-[]backpropagation-[]algorithm-[]neural-[]n
 etworks .
  []
 
-[39
-
-])) (./chapters/appendix.tex [40]
+)) (./chapters/appendix.tex [41]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 13.
- (./chapters/openapi.json [41
+ (./chapters/openapi.json [42
 
-] [42]
-[43] [44] [45]))
+] [43] [44]
+[45] [46]))
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
- [46]
+ [47]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
@@ -935,13 +954,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
  ) 
 Here is how much of TeX's memory you used:
- 13646 strings out of 492609
- 186938 string characters out of 6132344
- 854943 words of memory out of 5000000
- 16969 multiletter control sequences out of 15000+600000
+ 13661 strings out of 492609
+ 187178 string characters out of 6132344
+ 856741 words of memory out of 5000000
+ 16976 multiletter control sequences out of 15000+600000
  34368 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,14n,51p,1211b,1803s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,14n,51p,1211b,2045s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive2/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/texlive2/2019/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive2/2019/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive2/2019/texmf-dist/fonts/t
@@ -954,10 +973,10 @@ d:/texlive2/2019/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/texlive2/201
 onts/type1/urw/palatino/uplbi8a.pfb><d:/texlive2/2019/texmf-dist/fonts/type1/ur
 w/palatino/uplr8a.pfb><d:/texlive2/2019/texmf-dist/fonts/type1/urw/palatino/upl
 ri8a.pfb>
-Output written on main.pdf (51 pages, 912747 bytes).
+Output written on main.pdf (52 pages, 917073 bytes).
 PDF statistics:
- 931 PDF objects out of 1000 (max. 8388607)
- 828 compressed objects within 9 object streams
- 374 named destinations out of 1000 (max. 500000)
+ 963 PDF objects out of 1000 (max. 8388607)
+ 859 compressed objects within 9 object streams
+ 382 named destinations out of 1000 (max. 500000)
  459 words of extra memory for PDF output out of 10000 (max. 10000000)
 
