@@ -3,14 +3,14 @@
 \section{Scenarii de utilizare}
 
 Utilizatorul poate efectua următoarele acțiuni:
-\subsection{Logare}
-Utilizatorul se loghează în aplicație, care îl va redirecta către platforma Flickr, pentru a efectua autentificarea prin intermediul acesteia.
+\subsection{Autentificare}
+Utilizatorul se autentifică în aplicație, care îl va redirecta către platforma Flickr, pentru a efectua autentificarea prin intermediul acesteia.
 
 \subsection{Alege sursa imaginilor}
 Utilizatorul poate alege sursa imaginilor ce vor fi analizare: propriul profil, imaginile contactelor sale, sau imagini publice de pe platforma Flickr.
 
 \subsection{Încarcă imagine}
-Pentru a efectua această acțiune, utilizatorul trebuie să fi trecut prin pasul de logare și eventual să fi ales sursa imaginilor. Dacă acesta nu a ales sursa imaginilor, în mod implicit aceasta este propriul profil. Scenariul acesta de utilizare presupune ca utilizatorul să aleagă o imagine de pe propriul dispozitiv pe care să o trimită către aplicație.
+Pentru a efectua această acțiune, utilizatorul trebuie să fi trecut prin pasul de autentificare și eventual să fi ales sursa imaginilor. Dacă acesta nu a ales sursa imaginilor, în mod implicit aceasta este propriul profil. Scenariul acesta de utilizare presupune ca utilizatorul să aleagă o imagine de pe propriul dispozitiv pe care să o trimită către aplicație.
 
 Pentru a returna imaginile similare din punct de vedere vizual, aplicația va efectua următoarele acțiuni:
 \begin{enumerate}
@@ -30,7 +30,7 @@ Pentru a returna imaginile similare din punct de vedere vizual, aplicația va ef
 
 
 \section{Arhitectura aplicației}
-Aplicația este împărțită în două module, dar folosește și anumite servicii externe.Utilizatorul interacționează direct cu modulul  \textit{front-end}, o aplicație web realizată cu ajutorul \textit{framework}-ului Angular în limbajul Typescript. La rândul său, modulul este împărțit în mai multe componente, acestea apelând unele servicii. Modulul de back-end este realizat cu ajutorul \textit{framework}-ului Flask în limbajul Python. Se folosesc mai multe biblioteci pentru a efectua anumite operații(ex. \textit{requests} pentru a apela API-uri, \textit{pony.orm} pentru conectarea la baza de date) și \textit{framework}-uri specializate pentru rețele neuronale(Tensorflow și Keras). Serviciile externe sunt reprezentate de API-urile platformelor Flickr(pentru autentificare, informații despre profil și imagini) și DataMuse(pentru a obține sinonime). De asemenea se mai folosește o bază de date SQLite pentru reținerea \textit{token}-ului de acces și identificatorului unic.
+Aplicația este împărțită în două module, dar folosește și anumite servicii externe. Utilizatorul interacționează direct cu modulul  \textit{front-end}, o aplicație web realizată cu ajutorul \textit{framework}-ului Angular în limbajul Typescript. La rândul său, modulul este împărțit în mai multe componente, acestea apelând unele servicii. Modulul de back-end este realizat cu ajutorul \textit{framework}-ului Flask în limbajul Python. Se folosesc mai multe biblioteci pentru a efectua anumite operații(ex. \textit{requests} pentru a apela API-uri, \textit{pony.orm} pentru conectarea la baza de date) și \textit{framework}-uri specializate pentru rețele neuronale(Tensorflow și Keras). Serviciile externe sunt reprezentate de API-urile platformelor Flickr(pentru autentificare, informații despre profil și imagini) și DataMuse(pentru a obține sinonime). De asemenea se mai folosește o bază de date SQLite pentru reținerea \textit{token}-ului de acces și identificatorului unic.
 
  \begin{figure}[!htbp]
     \begin{center}
@@ -42,9 +42,9 @@ Aplicația este împărțită în două module, dar folosește și anumite servi
 \section{Planificarea activităților realizate de către aplicație}
 Fluxul de activități în cadrul aplicației se desfășoară în modul urmator
 \begin{enumerate}
-    \item Modulul \textit{front-end} afișează pagina de logare și redirectează utilizatorul la procesul de logare de pe \textit{back-end} (Home Component)
-    \item Modulul \textit{back-end} trimite cererea de logare prin OAuth la API-ul Flickr
-    \item  Se salvează \textit{request token}-ului și redirectarea la autorizarea pagina de logare în Flickr și autorizare prin API-ul Flickr
+    \item Modulul \textit{front-end} afișează pagina de autentificare și redirectează utilizatorul la procesul de autentificare de pe \textit{back-end} (Home Component)
+    \item Modulul \textit{back-end} trimite cererea de autentificare prin OAuth la API-ul Flickr
+    \item  Se salvează \textit{request token}-ului și redirectarea la autorizarea pagina de autentificare în Flickr și autorizare prin API-ul Flickr
     \item Se trimite \textit{request token}-ul autorizat de către utilizator pentru a obține un \textit{token} de acces
     \item  Se generează un identificator unic pentru utilizator, se salvează în baza de date împreună cu \textit{token}-ul de acces primit și apoi se face redirectarea către \textit{front-end} trimițând și identificatorul unic
     \item Modulul \textit{front-end} reține identificatorul utilizatorului și cere  datele despre profil 
@@ -71,10 +71,10 @@ Fluxul de activități în cadrul aplicației se desfășoară în modul urmator
 \subsection{API-ul expus}
 Specificația OPENApi a API-ului se găsește la ~\nameref{ch:anexa1}
 \subsubsection{/login}
-Endpoint pentru logare, utilizatorul este redirectat aici de către modulul \textit{front-end}. Aplicația va redirecta la rândul ei catre /authorize.
+Endpoint pentru autentificare, utilizatorul este redirectat aici de către modulul \textit{front-end}. Aplicația va redirecta la rândul ei catre /authorize.
 
 \subsubsection{/authorize}
-Endpoint pentru autorizare, se ajunge aici din redirectarea efectuată de către aplicație. Are ca parametrii \textit{oauth-token} și \textit{oauth-verifier} și va redirecționa către \textit{front-end}.
+Endpoint pentru autorizare, se ajunge aici din redirectarea efectuată de către aplicație. Are ca parametri \textit{oauth-token} și \textit{oauth-verifier} și va redirecționa către \textit{front-end}.
 
 \subsubsection{/profile}
 Returnează informațiile despre profilul de Flickr al utilizatorului: numele utilizatorului și imaginea sa de profil. Are ca parametru identificatorul utilizatorului.
@@ -120,10 +120,10 @@ După aproximativ 4 zile de căutări au fost obținute mai multe arhitecturi de
     \end{center}
 \end{figure}
 
-Modelul folosit în aplicația {\applicationtitle}, numit \textit{NASNet Mobile}, este o versiune scalată a arhitecturii \textit{NASNet}, mai mică, cu 5 326 716 parametrii optimizată pentru un const computațional redus și o viteză mai mare. Modelul folosit este pre-antrenat pe 1000 de categorii din setul de date ImageNet, având o acuratețe de 91.9 procente pe același set de date.
+Modelul folosit în aplicația {\applicationtitle}, numit \textit{NASNet Mobile}, este o versiune scalată a arhitecturii \textit{NASNet}, mai mică, cu 5 326 716 parametri optimizată pentru un const computațional redus și o viteză mai mare. Modelul folosit este pre-antrenat pe 1000 de categorii din setul de date ImageNet, având o acuratețe de 91.9 procente pe același set de date.
 
 \subsection{Baza de date}
-Baza de date folosită, de tip SQLite, are un singur tabel folosit pentru a stoca \textit{token}-ul de acces și identificatorul unicat generat în relație cu acesta.
+Baza de date folosită, de tip SQLite, are un singur tabel folosit pentru a stoca \textit{token}-ul de acces și identificatorul unic al utilizatorului generat în relație cu acesta.
 
 \begin{figure}[!htbp]
     \begin{center}

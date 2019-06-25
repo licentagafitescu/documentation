@@ -6,15 +6,15 @@
     },
     "paths": {
         "/login": {
-            "summary": "Endpoint logare",
-            "description": "Enpoint-ul pentru logare, utilizatorul este redirectat aici din browser.",
+            "summary": "Endpoint autentificare",
+            "description": "Enpoint-ul pentru autentificare, utilizatorul este redirectat aici din browser.",
             "get": {
                 "responses": {
                     "302": {
                         "description": "Redirecteaza catre /authorize, incluzand oauth_token si oauth_verifier."
                     }
                 },
-                "summary": "GET  pentru logare",
+                "summary": "GET  pentru autentificare",
                 "description": "GET din browser, utilizatorul fiind redirectat aici din front-end."
             }
         },

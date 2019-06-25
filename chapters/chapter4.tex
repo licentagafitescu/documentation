@@ -1,11 +1,12 @@
 \chapter{Detalii de implementare}
 \section{Detaliile modulului front-end}
-Modulul \textit{front-end} este realizat cu ajutorul \textit{framework}-ului Angulare, folosind limbajul Typescript și tehnologiile HTML și CSS.
+Modulul \textit{front-end} este realizat cu ajutorul \textit{framework}-ului Angular. Angular este un \textit{framework} cu sursă deschisă dezvoltat de către Google pentru crearea de aplicații client  SPA (\textit{single-page application}) folosind HTML, CSS și TypeScript. O aplicație Angular este compusă din module, componente și servicii.
+
 
 Este împărțit în 3 componente: \textit{HomeComponent}, \textit{LoginComponent} și \textit{ImageUploadComponent} și folosește 3 servicii: \textit{AuthService}, \textit{Auth-GuardService} și \textit{ImageService}.
 
 \subsection{HomeComponent}
- Se află pe ruta /home și este prima componentă cu care interacționează orice utilizatorul. Rolul ei este de a oferi informații despre aplicație și a facilita procesul de logare. Are un singur buton, cel de "Login", care atunci când este apăsat va redirecta utilizatorul spre modulul de \textit{back-end} pentru continuarea procesului de logare.
+ Se află pe ruta /home și este prima componentă cu care interacționează orice utilizatorul. Rolul ei este de a oferi informații despre aplicație și a facilita procesul de autentificare. Are un singur buton, cel de "Login", care atunci când este apăsat va redirecta utilizatorul spre modulul de \textit{back-end} pentru continuarea procesului de autentificare.
  
  \subsection{LoginComponent}
  Această componentă are ruta /login/:id, unde parametrul id va reprezenta identificatorul utilizatorului trimis de către serviciul de \textit{back-end} prin redirectare. În cadrul componentei se va prelua valoarea parametrului din rută și se va apela funcția login din cadrul serviciului \textit{AuthService}. Această funcție se ocupă de salvarea identificatorului. Inițial acesta era salvat în LocalStorage, dar din considerente de securitate, s-a ales ca soluție SessionStorage, care se golește la părăsirea sesiunii curente. Componenta apelează din nou \textit{AuthService} și pentru a cere modulului de \textit{back-end} informații despre profilul de Flickr ale utilizatorului, informații salvate în cadrul serviciului. După aceste acțiuni, se folosește routerul din Angular pentru a redirecta utilizatorul către următoarea componentă, \textit{ImageUploadComponent}.
@@ -15,11 +16,14 @@ Componenta aferentă rutei /upload, care este o rută protejată prin o gardă d
 
 Componenta conține un buton "Choose Files" care odată apăsat deschide o fereastră de unde utilizatorul va alege o imagine, butonul având în spate un \textit{input} HTML de tip imagine. După ce utilizatorul selectează o imagine, se va apela funcția \textit{preview}, care va citi conținutul imaginii și o va afișa pe ecran, pentru ca utilizatorul să își vizualizeze selecția.În cadrul paginii există și un grup de 3 \textit{radio-buttons}, care permit utilizatorului să selecteze de unde vrea să provină imaginile care vor fi analizate pentru a determina similaritatea. Opțiunile sunt profilul de Flickr utilizatorului, imaginile utilizatorilor din lista sa de contacte sau imaginile publice de pe Flickr, în mod implicit fiind selectată opțiunea corespunzătoare propriului profil.
 
-Apăsarea butonului de "Upload" va apela funcția cu același nume. Funcția va afișa un element de tip \textit{spinner} pe ecran pentru a indica utilizatorului procesarea cererii. De asemenea va prelua identificatorul cu ajutorul funcției getUser din AuthService, funcție ce preia identificatorul din SessionStorage. Componenta va apela funcția postImage din serviciul ImageService, folosind imaginea în format base64,  identificatorul utilizatorului și opțiunea acestuia ca parametrii.
+Apăsarea butonului de "Upload" va apela funcția cu același nume. Funcția va afișa un element de tip \textit{spinner} pe ecran pentru a indica utilizatorului procesarea cererii. De asemenea va prelua identificatorul cu ajutorul funcției getUser din AuthService, funcție ce preia identificatorul din SessionStorage. Componenta va apela funcția postImage din serviciul ImageService, folosind imaginea în format base64,  identificatorul utilizatorului și opțiunea acestuia ca parametri.
 
 Folosind clientul de http din Angular, ImageService transmite o cerere la \textit{back-end} și returnează răspunsul acestuia. În funcție de răspuns, componenta va afișa lista de etichete aferente imaginii și imaginile similare vizual, sau un mesaj explicativ în cazul în care nu au fost găsite etichete/imagini.
 
 \section{Detaliile modulului back-end}
+Modulul de back-end este realizat cu ajutorul \textit{framework}-ului Flask în limbajul Python. Flask este un \textit{microframework} WSGI(\textit{Web Server Gateway Interface}) pentru realizarea de aplicații web, scris în Python. Este cunoscut pentru simplitatea sa, dar și pentru posibilitatea de a se scala pentru aplicații oricât de complexe.
+
+
 \subsection{Autentificarea cu OAuth}
 Pentru a realiza autentificarea pe platforma Flickr prin protocolul OAuth, aplicația folosește o bibliotecă de cod numită \textit{AuthLib} ce furnizează un client OAuth pentru Flask. Clientul este înregistrat în aplicație folosind anumite configurări (id-ul clientului, url-ul pentru autorizare, etc.) dintr-un fișier de configurări. Atunci când este accesată ruta /login, aplicația primește prin intermediul clientului OAuth un \textit{request token} și generează un identificator unic pentru utilizatorul ce a accesat ruta, salvând \textit{token}-ul într-un sistem de cache, apoi redirectează către ruta /authorize.
 
@@ -39,12 +43,12 @@ Biblioteca Keras oferă mai multe modele de rețele neurale preantrenate pe acel
     \end{center}
 \end{figure}
 
-Pentru a alege un anume model, s-au testat mai multe din cele disponibile, apoi s-a încercat a se face un compromis între acuratețe și viteza de analiză a unei imagini (cunoscută ca și viteza de \textit{forward-pass} în rețea). Ambii parametrii depind de mărimea modelului, numărul de parametrii, tipul de straturi folosite, precum și arhitectura modelului în general.
+Pentru a alege un anume model, s-au testat mai multe din cele disponibile, apoi s-a încercat a se face un compromis între acuratețe și viteza de analiză a unei imagini (cunoscută ca și viteza de \textit{forward-pass} în rețea). Ambii parametri depind de mărimea modelului, numărul de parametri, tipul de straturi folosite, precum și arhitectura modelului în general.
 
 De asemenea viteza depinde și de mărimea imaginii analizate(aceeași indiferent de model) și mărimea la care trebuie dimensionată imaginea pentru a fi acceptată de model(diferită). În tabela \ref{table:1} se găsesc comparații ale modelelor încercate ținând cont de viteza medie de analiza a unei imagini (prima imagine după instanțierea modelului durează mai mult și nu a fost luată în considerare pentru medie), acuratețea modelului și mărimea datelor de intrare acceptate( în format (lățime, înălțime) ).
 
 
-\begin{table}[h!]
+\begin{table}[ht!]
 \centering
  \begin{tabular}{||c c c c c||} 
  \hline
@@ -116,10 +120,10 @@ predictions = decode_predictions(predictions)[0]
 
 În funcție de cerințe, aplicația folosește și un parametru care precizează probabilitatea minimă acceptată pentru o etichetă ca aceasta să se regăsească în lista de etichete finală, acest parametru având momentan valoarea de 0.25.
 
-\subsection{Aducerea imaginilor de pe Flickr}
+\subsection{Preluarea imaginilor de pe Flickr}
 În funcție de opțiunea aleasă pentru sursa imaginilor ce vor fi analizate, API-ul de la Flickr va fi folosit în mod diferit.
 
-Totuși orice metodă este folosită, va fi adusă o listă de fotografii cu un format specific, un exemplu fiind:
+Totuși orice metodă este folosită, va fi preluată o listă de fotografii cu un format specific, un exemplu fiind:
 \begin{lstlisting}[language=XML]
 <photos page="2" pages="89" perpage="10" total="881">
 	<photo id="2636" owner="47058503995@N01" 
@@ -139,11 +143,11 @@ Totuși orice metodă este folosită, va fi adusă o listă de fotografii cu un 
 \cite{flickr-api}
 
 \subsubsection{Folosirea metodei getPhotos}
-Endpoint-ul flickr.people.getPhotos returnează imaginile de pe profilul unui anumit utilizator. Pentru a utiliza metoda, cererea trebuie să fie autentificată folosind \textit{token}-ul de acces. Metoda returnează imaginile vizibile utilizatorului autentificat. Aplicația folosește această metodă pentru a aduce imaginile de pe profilul utilizatorului, utilizând valoarea "user\_id=me" ca și parametru în cerere. 
+Endpoint-ul flickr.people.getPhotos returnează imaginile de pe profilul unui anumit utilizator. Pentru a utiliza metoda, cererea trebuie să fie autentificată folosind \textit{token}-ul de acces. Metoda returnează imaginile vizibile utilizatorului autentificat. Aplicația folosește această metodă pentru a prelua imaginile de pe profilul utilizatorului, utilizând valoarea "user\_id=me" ca și parametru în cerere. 
 
 \subsubsection{Folosirea metodei search}
-În cazul opțiunii de a aduce imaginile de pe profilele contactelor, găsirea listei de contacte a utilizatorului și folosirea metodei getPhotos descrise anterior ar afecta negativ performanța aplicației, o cerere putând să aducă mii de fotografii și crescând în mod neacceptat viteza de răspuns.
-Pentru a optimiza acest proces și pentru a aduce și imagini publice relevante de pe platformă, aplicația va folosi endpoint-ul flickr.photos.search, care returnează o listă de imagini ce corespund unor anumite criterii.
+În cazul opțiunii de a prelua imaginile de pe profilele contactelor, găsirea listei de contacte a utilizatorului și folosirea metodei getPhotos descrise anterior ar afecta negativ performanța aplicației, o cerere putând să aducă mii de fotografii și crescând în mod neacceptat viteza de răspuns.
+Pentru a optimiza acest proces și pentru a prekua și imagini publice relevante de pe platformă, aplicația va folosi endpoint-ul flickr.photos.search, care returnează o listă de imagini ce corespund unor anumite criterii.
 
 Pentru aducerea fotografiilor relevante din lista de contacte, se va folosi "contacts=1" ca și parametru în cerere. Tot ca și parametru se va folosi "text", adăugându-i ca valoare eticheta după care vrem să căutăm imagini. Căutarea se va face în descriere, titlu și etichetele imaginilor, așa cum s-a menționat anterior. Pentru a primi cele mai relevante imagini, cererea va include și parametrul "sort=relevance".
 
