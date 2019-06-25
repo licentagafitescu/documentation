@@ -39,25 +39,42 @@ Aplicația este împărțită în două module, dar folosește și anumite servi
     \end{center}
 \end{figure}
 
-\section{Planificarea activităților realizate de către aplicație}
-Fluxul de activități în cadrul aplicației se desfășoară în modul urmator
+
+Modulul \textit{front-end} este împărțit în 3 componente: HomeComponent, LoginComponent și ImageUploadComponent, iar în cadrul modulului se folosesc și 3 servicii: AuthService, Auth-GuardService și ImageService. HomeComponent are rolul de a oferi informații despre aplicație și a facilita procesul de autentificare. LoginComponent se ocupă de partea de autentificare în aplicație, folosind AuthService pentru a stoca anumite informații despre utilizator și a pregăti o experiență personalizată pentru acesta. ImageUploadComponent facilitează interacțiunea cu utilizatorul în cadrul scenariului de utilizare de încărcare a unei imagini. Folosind ImageUploadService, procesează cererile utilizatorului și răspunsul modulului de \textit{back-end}, la final afișând informațiile cerute de către utilizator. AuthGuardService este folosit în procesul de securizare a aplicației, împiedicând accesarea ImageUploadComponent de către un utilizator neautentificat.
+
+ \begin{figure}[!htbp]
+    \begin{center}
+        \includegraphics[width=1.0\textwidth]{images/front_end.png}
+        \caption{Arhitectura modulului front-end}
+    \end{center}
+\end{figure}
+
+\pagebreak
+Modulul \textit{back-end} este împărțit în 3 componente principare: main.py, prediction.py și repository.py. Submodulul main are mai multe sarcini: 
 \begin{enumerate}
-    \item Modulul \textit{front-end} afișează pagina de autentificare și redirectează utilizatorul la procesul de autentificare de pe \textit{back-end} (Home Component)
-    \item Modulul \textit{back-end} trimite cererea de autentificare prin OAuth la API-ul Flickr
-    \item  Se salvează \textit{request token}-ului și redirectarea la autorizarea pagina de autentificare în Flickr și autorizare prin API-ul Flickr
-    \item Se trimite \textit{request token}-ul autorizat de către utilizator pentru a obține un \textit{token} de acces
-    \item  Se generează un identificator unic pentru utilizator, se salvează în baza de date împreună cu \textit{token}-ul de acces primit și apoi se face redirectarea către \textit{front-end} trimițând și identificatorul unic
-    \item Modulul \textit{front-end} reține identificatorul utilizatorului și cere  datele despre profil 
-    \item Modulul \textit{back-end} furnizează datele despre profil(nume utilizator, imagine de profil)
-    \item \textit{Front-end}-ul redirectează utilizatorul la pagina de încărcare imagini (Login Component)
-    \item Aici i se oferă utilizatorului posibilitatea de a încărca o imagine și de a alege sursa imaginilor, apoi trimite la modulul \textit{back-end} aceste informații (Image Upload Component)
-    \item Modulul \textit{back-end} primește imaginea și opțiunile privitoare la sursă și  analizează imaginea cu o rețea neurală, obținând o listă de etichete
-    \item Se apelează API-ul DataMuse pentru a obține cuvinte similare etichetelor obținute
-    \item Se apelează API-ul Flickr pentru a obține imagini și acestea se  analizează cu rețeaua neurală
-    \item Se compară etichetele imaginilor cu etichetele imaginii încărcate și se creează o listă de imagini similare
-    \item Se returnează lista către \textit{front-end}
-    \item \textit{Front-end}-ul afișează imaginile returnate de \textit{back-end} (Image Upload Component)
+    \item Autentificarea cu Oauth
+    \item Apelarea FlickrAPI
+    \item Apelarea DataMuse API
+    \item Comunicarea cu modulul \textit{front-end}
+    \item Compararea listelor de etichete și detectarea similarității
 \end{enumerate}{}
+Submodulul repository este folosit pentru comunicarea cu baza de date, folosindu-se biblioteca de cod pony.orm în acest scop.
+Submodulul prediction se ocupă de analiza imaginilor folosind o rețea neuronală și returnează lista de etichete ce descriu fiecare imagine în parte.
+
+ \begin{figure}[!htbp]
+    \begin{center}
+        \includegraphics[width=1.0\textwidth]{images/back_end.png}
+        \caption{Arhitectura modulului back-end}
+    \end{center}
+\end{figure}
+
+
+\pagebreak
+\section{Comunicarea între componentele aplicației}
+Utilizatorul va comunica cu modulul de front-end pentru a trimite cereri și a primi informațiile corespunzătoare cererii sale. De asemenea utilizatorul va interacționa cu pagini afișate de Flickr în browser pentru a autoriza aplicația {\applicationtitle}.
+Modulul front-end comunică cu utilizatorul și cu modulul back-end. Comunicare cu modulul back-end se realizează prin trimiterea de cereri HTTP cărew un API pus la dispoziție de către back-end.
+Pe lângă comunicarea cu modulul front-end deja menționată, modulul back-end va mai apela doua API-uri: API-ul Flickr pentru preluarea de imagini și informații despre utilizator precum și autentificarea prin protocolul OAuth 1.0 și DateMuse API pentru preluarea de cuvinte similare ca înțeles unui cuvânt dat.
+
 
 \begin{figure}[!htbp]
     \begin{center}
@@ -66,6 +83,7 @@ Fluxul de activități în cadrul aplicației se desfășoară în modul urmator
     \end{center}
 \end{figure}
 
+\pagebreak
 \section{Modulul \textit{back-end}}
 
 \subsection{API-ul expus}

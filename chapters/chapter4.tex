@@ -1,4 +1,25 @@
 \chapter{Detalii de implementare}
+\section{Implementarea aplicației}
+
+Implementarea aplicației a fost realizată într-un mod care permite următoarele acțiuni în cadrul unui scenariu de utilizare uzual:
+\begin{enumerate}
+    \item Modulul \textit{front-end} afișează pagina de autentificare și redirectează utilizatorul la procesul de autentificare de pe \textit{back-end} (Home Component)
+    \item Modulul \textit{back-end} trimite cererea de autentificare prin OAuth la API-ul Flickr
+    \item  Se salvează \textit{request token}-ului și redirectarea la autorizarea pagina de autentificare în Flickr și autorizare prin API-ul Flickr
+    \item Se trimite \textit{request token}-ul autorizat de către utilizator pentru a obține un \textit{token} de acces
+    \item  Se generează un identificator unic pentru utilizator, se salvează în baza de date împreună cu \textit{token}-ul de acces primit și apoi se face redirectarea către \textit{front-end} trimițând și identificatorul unic
+    \item Modulul \textit{front-end} reține identificatorul utilizatorului și cere  datele despre profil 
+    \item Modulul \textit{back-end} furnizează datele despre profil(nume utilizator, imagine de profil)
+    \item \textit{Front-end}-ul redirectează utilizatorul la pagina de încărcare imagini (Login Component)
+    \item Aici i se oferă utilizatorului posibilitatea de a încărca o imagine și de a alege sursa imaginilor, apoi trimite la modulul \textit{back-end} aceste informații (Image Upload Component)
+    \item Modulul \textit{back-end} primește imaginea și opțiunile privitoare la sursă și  analizează imaginea cu o rețea neurală, obținând o listă de etichete
+    \item Se apelează API-ul DataMuse pentru a obține cuvinte similare etichetelor obținute
+    \item Se apelează API-ul Flickr pentru a obține imagini și acestea se  analizează cu rețeaua neurală
+    \item Se compară etichetele imaginilor cu etichetele imaginii încărcate și se creează o listă de imagini similare
+    \item Se returnează lista către \textit{front-end}
+    \item \textit{Front-end}-ul afișează imaginile returnate de \textit{back-end} (Image Upload Component)
+\end{enumerate}{}
+
 \section{Detaliile modulului front-end}
 Modulul \textit{front-end} este realizat cu ajutorul \textit{framework}-ului Angular. Angular este un \textit{framework} cu sursă deschisă dezvoltat de către Google pentru crearea de aplicații client  SPA (\textit{single-page application}) folosind HTML, CSS și TypeScript. O aplicație Angular este compusă din module, componente și servicii.
 
